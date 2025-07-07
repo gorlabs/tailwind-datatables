@@ -183,34 +183,44 @@ Open your gorlabs-datatable/resources/css/app.css file and completely replace it
 
 /* CSS variables for DataTables and other custom theme colors. */
 :root {
-    --color-primary-DEFAULT: 249 115 22;      /* #f97316 */
-    --color-primary-light: 254 243 199;       /* #fef3c7 */
-    --color-primary-dark-light: 249 115 22;   /* rgba(249,115,22,.15) -> RGB değerleri */
+    /* Tailwind CSS Mavi Paleti */
+    --color-primary-DEFAULT: 59 130 246;     /* blue-500: #3b82f6 */
+    --color-primary-light: 219 234 254;      /* blue-100: #dbeafe */
+    --color-primary-dark-light: 191 219 254; /* blue-200: #bfdbfe */
 
-    --color-secondary-DEFAULT: 249 115 22;    /* #f97316 */
-    --color-secondary-light: 254 243 199;     /* #fef3c7 */
-    --color-secondary-dark-light: 249 115 22; /* #f97316 */
+    --color-secondary-DEFAULT: 59 130 246;   /* blue-500: #3b82f6 */
+    --color-secondary-light: 219 234 254;    /* blue-100: #dbeafe */
+    --color-secondary-dark-light: 191 219 254;/* blue-200: #bfdbfe */
 
-    --color-success-DEFAULT: 249 115 22;      /* #f97316 */
-    --color-success-light: 254 243 199;       /* #fef3c7 */
-    --color-success-dark-light: 249 115 22;   /* #f97316 */
+    /* Başarı (Success) için yeşil tonları, Tehlike (Danger) için kırmızı tonları ve Uyarı (Warning) için sarı/turuncu tonlarını kullanmak daha yaygındır. Ancak sen mavi istediğin için tümünü maviye ayarladım. */
+    --color-success-DEFAULT: 59 130 246;     /* blue-500: #3b82f6 */
+    --color-success-light: 219 234 254;      /* blue-100: #dbeafe */
+    --color-success-dark-light: 191 219 254; /* blue-200: #bfdbfe */
 
-    --color-danger-DEFAULT: 249 115 22;       /* #f97316 */
-    --color-danger-light: 254 243 199;        /* #fef3c7 */
-    --color-danger-dark-light: 249 115 22;    /* #f97316 */
+    --color-danger-DEFAULT: 59 130 246;      /* blue-500: #3b82f6 */
+    --color-danger-light: 219 234 254;       /* blue-100: #dbeafe */
+    --color-danger-dark-light: 191 219 254;  /* blue-200: #bfdbfe */
 
-    --color-warning-DEFAULT: 249 115 22;      /* #f97316 */
-    --color-warning-light: 254 243 199;       /* #fef3c7 */
-    --color-warning-dark-light: 249 115 22;   /* #f97316 */
+    --color-warning-DEFAULT: 59 130 246;     /* blue-500: #3b82f6 */
+    --color-warning-light: 219 234 254;      /* blue-100: #dbeafe */
+    --color-warning-dark-light: 191 219 254; /* blue-200: #bfdbfe */
 
-    --color-info-DEFAULT: 249 115 22;         /* #f97316 */
-    --color-info-light: 254 243 199;          /* #fef3c7 */
-    --color-info-dark-light: 249 115 22;      /* #f97316 */
+    /* Bilgi (Info) için mavi tonları zaten idealdir. */
+    --color-info-DEFAULT: 59 130 246;        /* blue-500: #3b82f6 */
+    --color-info-light: 219 234 254;         /* blue-100: #dbeafe */
+    --color-info-dark-light: 191 219 254;    /* blue-200: #bfdbfe */
 
-    --color-dark-DEFAULT: 249 115 22;         /* #f97316 */
-    --color-dark-light: 254 243 199;          /* #fef3c7 */
-    --color-dark-dark-light: 249 115 22;      /* #f97316 */
- 
+    /* Koyu (Dark) için gri/siyah tonları kullanmak daha yaygındır, ancak sen mavi istediğin için devam ettim. */
+    --color-dark-DEFAULT: 59 130 246;        /* blue-500: #3b82f6 */
+    --color-dark-light: 219 234 254;         /* blue-100: #dbeafe */
+    --color-dark-dark-light: 191 219 254;    /* blue-200: #bfdbfe */
+
+    /* DataTables custom colors (dt-primary) - RGB FORMAT SEPARATED BY SPACES*/
+    --color-dt-primary-DEFAULT: 59 130 246; /* blue-500: #3b82f6 */
+    --color-dt-primary-dark: 29 78 216;     /* blue-700: #1d4ed8 */
+    --color-dt-primary-light: 96 165 250;   /* blue-400: #60a5fa */
+
+    /* Bu kısımları orijinal bırakıyorum. */
     --dt-row-selected: 13, 110, 253;
     --dt-row-selected-text: 255, 255, 255;
     --dt-row-selected-link: 0, 0, 0;
@@ -218,11 +228,6 @@ Open your gorlabs-datatable/resources/css/app.css file and completely replace it
     --dt-row-hover: 0, 0, 0;
     --dt-column-ordering: 0, 0, 0;
     --dt-html-background: 255, 255, 255;
-
-    /* DataTables custom colors (dt-primary) - RGB FORMAT SEPARATED BY SPACES*/
-    --color-dt-primary-DEFAULT: 249 115 22;  /* #f97316 */
-    --color-dt-primary-dark: 194 65 12;     /* #c2410c */
-    --color-dt-primary-light: 253 186 116;   /* #fdba74 */
 }
 
 ```
