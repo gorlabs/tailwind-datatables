@@ -730,6 +730,8 @@ export default {
 Open your gorlabs-datatable/routes/web.php file and add the following routes:
 
 ```php
+use App\Http\Controllers\PostController;
+
 require __DIR__.'/auth.php';
 
 // Newly Added Post Routes

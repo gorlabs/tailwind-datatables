@@ -765,6 +765,7 @@ export default {
 gorlabs-datatable/routes/web.php dosyanızı açın ve aşağıdaki rotaları ekleyin.
 
 ```php
+use App\Http\Controllers\PostController;
 require __DIR__.'/auth.php';
 
 // Yeni Eklenen Post Rotları
