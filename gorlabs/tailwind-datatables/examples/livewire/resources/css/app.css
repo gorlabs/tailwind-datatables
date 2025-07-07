@@ -1,0 +1,61 @@
+/* DataTables Responsive stillerini burada ve en başta import edin */
+/* DataTables Tailwind stillerini burada ve en başta import edin */
+@import "datatables.net-responsive-dt/css/responsive.dataTables.css";
+@import '/vendor/gorlabs/tailwind-datatables/resources/css/datatables-tailwind.css';
+
+/* Tailwind CSS direktifleri */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DataTables ve diğer özel tema renkleri için CSS değişkenleri */
+:root {
+    --color-primary-DEFAULT: 249 115 22;      /* #f97316 */
+    --color-primary-light: 254 243 199;       /* #fef3c7 */
+    --color-primary-dark-light: 249 115 22;   /* rgba(249,115,22,.15) -> RGB değerleri */
+
+    --color-secondary-DEFAULT: 249 115 22;    /* #f97316 */
+    --color-secondary-light: 254 243 199;     /* #fef3c7 */
+    --color-secondary-dark-light: 249 115 22; /* #f97316 */
+
+    --color-success-DEFAULT: 249 115 22;      /* #f97316 */
+    --color-success-light: 254 243 199;       /* #fef3c7 */
+    --color-success-dark-light: 249 115 22;   /* #f97316 */
+
+    --color-danger-DEFAULT: 249 115 22;       /* #f97316 */
+    --color-danger-light: 254 243 199;        /* #fef3c7 */
+    --color-danger-dark-light: 249 115 22;    /* #f97316 */
+
+    --color-warning-DEFAULT: 249 115 22;      /* #f97316 */
+    --color-warning-light: 254 243 199;       /* #fef3c7 */
+    --color-warning-dark-light: 249 115 22;   /* #f97316 */
+
+    --color-info-DEFAULT: 249 115 22;         /* #f97316 */
+    --color-info-light: 254 243 199;          /* #fef3c7 */
+    --color-info-dark-light: 249 115 22;      /* #f97316 */
+
+    --color-dark-DEFAULT: 249 115 22;         /* #f97316 */
+    --color-dark-light: 254 243 199;          /* #fef3c7 */
+    --color-dark-dark-light: 249 115 22;      /* #f97316 */
+
+    /* DataTables'ın kendi iç değişkenleri (varsayılanlar veya senin özel ayarın) */
+    /* Bunlar genellikle virgülle ayrılmış RGB formatında bekler, bu yüzden formatı korudum.
+       Ancak `rgb(var(--color-xyz))` veya `rgba(var(--color-xyz), 0.x)` kullanırken
+       `--color-xyz`in boşlukla ayrılmış RGB olması tercih edilir.
+       Aşağıdaki `dt-row-selected` gibi değişkenler eğer doğrudan `rgb()` veya `rgba()` içine
+       `rgb(var(--dt-row-selected))` gibi geliyorsa boşluk, `rgba(var(--dt-row-selected), 0.5)`
+       gibi geliyorsa virgüllü kalabilir. DataTables'ın dökümantasyonuna bakmak en doğrusu,
+       ancak şimdilik geneli boşluklu, bu tarz spesifik olanları virgüllü bırakıyorum. */
+    --dt-row-selected: 13, 110, 253;
+    --dt-row-selected-text: 255, 255, 255;
+    --dt-row-selected-link: 0, 0, 0;
+    --dt-row-stripe: 0, 0, 0;
+    --dt-row-hover: 0, 0, 0;
+    --dt-column-ordering: 0, 0, 0;
+    --dt-html-background: 255, 255, 255;
+
+    /* DataTables özel renkleri (`dt-primary`) - BOŞLUKLA AYRILMIŞ RGB FORMATINDA */
+    --color-dt-primary-DEFAULT: 249 115 22;  /* #f97316 */
+    --color-dt-primary-dark: 194 65 12;     /* #c2410c */
+    --color-dt-primary-light: 253 186 116;   /* #fdba74 */
+}

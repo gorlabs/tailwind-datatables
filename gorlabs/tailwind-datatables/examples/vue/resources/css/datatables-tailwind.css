@@ -1,0 +1,2028 @@
+@import './_utility-colors.css';
+.dt-button.processing:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem; /* w-4 */
+    height: 1rem; /* h-4 */
+    margin-top: -0.5rem; /* -mt-2 */
+    margin-left: -0.5rem; /* -ml-2 */
+    box-sizing: border-box;
+    display: block;
+    border-width: 2px; /* border-2 */
+    border-color: rgb(var(--color-gray-700) / 1); /* border-gray-700 */
+    border-radius: 9999px; /* rounded-full */
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: dtb-spinner 1500ms infinite linear;
+    content: ' ';
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr > th.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr > td.control:before,
+table.dataTable.dtr-column > tbody > tr > th.control:before {
+    margin-right: 0.5rem; /* mr-2 */
+    display: inline-block;
+    box-sizing: border-box;
+    border-top-width: 5px; /* border-t-[5px] */
+    border-left-width: 10px; /* border-l-[10px] */
+    border-bottom-width: 5px; /* border-b-[5px] */
+    border-right-width: 0; /* border-r-0 */
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: rgb(var(--color-dt-primary-DEFAULT) / 0.5); /* border-l-dt-primary/50 */
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    content: '\25B2';
+}
+
+/* Diğer pseudo-element stilleri */
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control.arrow-right::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control.arrow-right::before,
+table.dataTable.dtr-column > tbody > tr > td.dtr-control.arrow-right::before,
+table.dataTable.dtr-column > tbody > tr > th.dtr-control.arrow-right::before,
+table.dataTable.dtr-column > tbody > tr > td.control.arrow-right::before,
+table.dataTable.dtr-column > tbody > tr > th.control.arrow-right::before {
+    border-top-width: 5px; /* border-t-[5px] */
+    border-left-width: 0; /* border-l-0 */
+    border-bottom-width: 5px; /* border-b-[5px] */
+    border-right-width: 10px; /* border-r-[10px] */
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: rgb(var(--color-dt-primary-DEFAULT) / 0.5); /* border-r-dt-primary/50 */
+    content: '\25B2';
+}
+
+/* Genişletilmiş ok stilleri */
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > th.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr.dtr-expanded td.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr.dtr-expanded th.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr.dtr-expanded td.control:before,
+table.dataTable.dtr-expanded th.control:before {
+    border-top-width: 10px; /* border-t-[10px] */
+    border-left-width: 5px; /* border-l-[5px] */
+    border-bottom-width: 0; /* border-b-0 */
+    border-right-width: 5px; /* border-r-[5px] */
+    border-style: solid;
+    border-top-color: rgb(var(--color-dt-primary-DEFAULT) / 0.5); /* border-t-dt-primary/50 */
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    content: '\25BC';
+}
+.dt-button.processing:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem; /* w-4 */
+    height: 1rem; /* h-4 */
+    margin-top: -0.5rem; /* -mt-2 */
+    margin-left: -0.5rem; /* -ml-2 */
+    box-sizing: border-box;
+    display: block;
+    border-width: 2px; /* border-2 */
+    border-color: rgb(var(--color-gray-700) / 1); /* border-gray-700 */
+    border-radius: 9999px; /* rounded-full */
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: dtb-spinner 1500ms infinite linear;
+    content: ' ';
+}
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before {
+    position: absolute;
+    display: block;
+    bottom: 50%;
+    color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* text-dt-primary */
+    content: '\25B2';
+
+}
+table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* text-dt-primary */
+    content: '\25BC';
+}
+table.dataTable thead > tr > th.dt-orderable-asc:not(.dt-ordering-asc) span.dt-column-order:before,
+table.dataTable thead > tr > th.dt-orderable-desc:not(.dt-ordering-desc) span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-asc:not(.dt-ordering-asc) span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-desc:not(.dt-ordering-desc) span.dt-column-order:after {
+    color: rgb(var(--color-gray-400) / 1); /* text-gray-400 */
+}
+table.dataTable thead > tr > th div.dt-column-header,
+table.dataTable thead > tr > th div.dt-column-footer,
+table.dataTable thead > tr > td div.dt-column-header,
+table.dataTable tfoot > tr > th div.dt-column-header,
+table.dataTable tfoot > tr > th div.dt-column-footer,
+table.dataTable tfoot > tr > td div.dt-column-header,
+table.dataTable tfoot > tr > td div.dt-column-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem; /* gap-1 */
+}
+
+@keyframes dtb-spinner {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes dtb-spinner {
+    100% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-ms-keyframes dtb-spinner {
+    100% {
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes dtb-spinner {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes dtb-spinner {
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+div.dataTables_wrapper {
+    position: relative;
+}
+
+div.dt-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* gap-2 */
+    position: initial;
+}
+
+div.dt-buttons .dt-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-gray-300) / 1); /* border-gray-300 */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* bg-dt-primary */
+    color: rgb(var(--color-white) / 1); /* text-white */
+    transition-property: all; /* transition */
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease-in-out */
+    transition-duration: 150ms; /* duration-150 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+div.dt-buttons .dt-button:hover {
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 0.9); /* hover:bg-dt-primary/90 */
+}
+div.dt-buttons .dt-button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgb(var(--color-white) / 1), 0 0 0 4px rgb(var(--color-dt-primary-DEFAULT) / 1); /* focus:ring-offset-2 focus:ring-dt-primary */
+}
+
+div.dt-button-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 24rem; /* w-96 */
+    margin-top: -6rem; /* -mt-24 */
+    margin-left: -12rem; /* -ml-48 */
+    background-color: rgb(var(--color-white) / 1); /* bg-white */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    text-align: center;
+    z-index: 2003;
+    overflow: hidden;
+}
+div.dt-button-info h2 {
+    padding-top: 2rem; /* pt-8 */
+    padding-bottom: 1rem; /* pb-4 */
+    padding-left: 2rem; /* px-8 */
+    padding-right: 2rem; /* px-8 */
+    margin: 0;
+    font-weight: 400; /* font-normal */
+}
+div.dt-button-info > div {
+    padding-left: 2rem; /* px-8 */
+    padding-right: 2rem; /* px-8 */
+    padding-bottom: 2rem; /* pb-8 */
+    padding-top: 1rem; /* pt-4 */
+}
+
+div.dtb-popover-close {
+    position: absolute;
+    top: 0.375rem; /* top-1.5 */
+    right: 0.375rem; /* right-1.5 */
+    width: 1.25rem; /* w-5 */
+    height: 1.25rem; /* h-5 */
+    text-align: center;
+    border-radius: 0.25rem; /* rounded */
+    cursor: pointer;
+    z-index: 2003;
+}
+
+button.dtb-hide-drop {
+    display: none;
+}
+
+div.dt-button-collection-title {
+    text-align: center;
+    padding-top: 0.375rem; /* py-1.5 */
+    padding-bottom: 0.375rem; /* py-1.5 */
+    padding-left: 0.625rem; /* px-2.5 */
+    padding-right: 0.625rem; /* px-2.5 */
+    margin-left: 0.625rem; /* mx-2.5 */
+    margin-right: 0.625rem; /* mx-2.5 */
+    font-size: 0.875rem; /* text-sm */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.dt-button-collection-title:empty {
+    display: none;
+}
+
+span.dt-button-spacer {
+    display: inline-block;
+    margin-left: 0.625rem; /* mx-2.5 */
+    margin-right: 0.625rem; /* mx-2.5 */
+    white-space: nowrap;
+}
+span.dt-button-spacer.bar {
+    border-left-width: 1px; /* border-l */
+    border-color: rgb(var(--color-gray-300) / 1); /* border-gray-300 */
+    vertical-align: middle;
+    padding-left: 0.625rem; /* pl-2.5 */
+}
+span.dt-button-spacer.bar:empty {
+    height: 1rem; /* h-4 */
+    width: 1px; /* w-px */
+    padding-left: 0;
+}
+div.dt-button-collection .dt-button-active {
+    padding-right: 3rem; /* pr-12 */
+}
+div.dt-button-collection .dt-button-active:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625rem; /* -mt-2.5 */
+    right: 1rem; /* right-4 */
+    display: inline-block;
+    content: '\2713';
+    color: inherit;
+}
+div.dt-button-collection .dt-button-active.dt-button-split {
+    padding-right: 0;
+}
+div.dt-button-collection .dt-button-active.dt-button-split:after {
+    display: none;
+}
+div.dt-button-collection .dt-button-active.dt-button-split > *:first-child {
+    padding-right: 3rem; /* pr-12 */
+}
+div.dt-button-collection .dt-button-active.dt-button-split > *:first-child:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625rem; /* -mt-2.5 */
+    right: 1rem; /* right-4 */
+    display: inline-block;
+    content: '\2713';
+    color: inherit;
+}
+div.dt-button-collection .dt-button-active-a a {
+    padding-right: 3rem; /* pr-12 */
+}
+div.dt-button-collection .dt-button-active-a a:after {
+    position: absolute;
+    right: 1rem; /* right-4 */
+    display: inline-block;
+    content: '\2713';
+    color: inherit;
+}
+
+div.dt-button-collection span.dt-button-spacer {
+    width: 100%;
+    font-size: 0.875rem; /* text-sm */
+    text-align: center;
+    margin-top: 0.625rem; /* my-2.5 */
+    margin-bottom: 0.625rem; /* my-2.5 */
+}
+div.dt-button-collection span.dt-button-spacer:empty {
+    height: 0;
+    width: 100%;
+}
+div.dt-button-collection span.dt-button-spacer.bar {
+    border-left-width: 0;
+    border-bottom-width: 1px; /* border-b */
+    border-color: rgb(var(--color-gray-200) / 1); /* border-gray-200 */
+    padding-left: 0;
+}
+
+@media print {
+    table.dataTable tr > * {
+        box-shadow: none;
+    }
+}
+
+div.dt-buttons > .dt-button,
+div.dt-buttons > div.dt-button-split .dt-button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 0.125rem; /* mx-0.5 */
+    margin-right: 0.125rem; /* mx-0.5 */
+    margin-bottom: 0.25rem; /* mb-1 */
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25; /* leading-tight */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-gray-300) / 1); /* border-gray-300 */
+    border-radius: 0.25rem; /* rounded */
+    cursor: pointer;
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* bg-dt-primary */
+    color: rgb(var(--color-white) / 1); /* text-white */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    text-decoration-line: none;
+}
+div.dt-buttons > .dt-button:first-child,
+div.dt-buttons > div.dt-button-split .dt-button:first-child {
+    margin-left: 0;
+}
+div.dt-buttons > .dt-button.disabled,
+div.dt-buttons > div.dt-button-split .dt-button.disabled {
+    cursor: default;
+    opacity: 0.4; /* opacity-40 */
+}
+div.dt-buttons > .dt-button.dt-button-active:not(.disabled),
+div.dt-buttons > div.dt-button-split .dt-button.dt-button-active:not(.disabled) {
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 0.9); /* bg-dt-primary/90 */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+}
+div.dt-buttons > .dt-button.dt-button-active:not(.disabled):hover:not(.disabled),
+div.dt-buttons > div.dt-button-split .dt-button.dt-button-active:not(.disabled):hover:not(.disabled) {
+    background-color: rgb(var(--color-dt-primary-dark) / 1); /* bg-dt-primary-dark */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+}
+div.dt-buttons > .dt-button:hover,
+div.dt-buttons > div.dt-button-split .dt-button:hover {
+    text-decoration-line: none;
+}
+div.dt-buttons > .dt-button:hover:not(.disabled),
+div.dt-buttons > div.dt-button-split .dt-button:hover:not(.disabled) {
+    border-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* border-dt-primary */
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 0.9); /* bg-dt-primary/90 */
+}
+div.dt-buttons > .dt-button:focus:not(.disabled),
+div.dt-buttons > div.dt-button-split .dt-button:focus:not(.disabled) {
+    outline: none;
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px rgb(var(--color-dt-primary-DEFAULT) / 1); /* ring-2 ring-dt-primary */
+}
+div.dt-buttons > .dt-button embed,
+div.dt-buttons > div.dt-button-split .dt-button embed {
+    outline: none;
+}
+div.dt-buttons > div.dt-button-split .dt-button:first-child {
+    border-right-width: 1px; /* border-r */
+    border-color: rgb(var(--color-gray-200) / 1); /* border-gray-200 */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; /* rounded-r-none */
+}
+div.dt-buttons > div.dt-button-split .dt-button:first-child:hover {
+    border-right-width: 1px; /* border-r */
+    border-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* border-dt-primary */
+}
+div.dt-buttons > div.dt-button-split .dt-button:last-child {
+    border-left-width: 1px; /* border-l */
+    border-color: transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; /* rounded-l-none */
+    margin-left: -1px; /* -ml-px */
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem; /* px-3 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    z-index: 2;
+}
+div.dt-buttons > div.dt-button-split .dt-button:last-child:hover {
+    border-left-width: 1px; /* border-l */
+    border-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* border-dt-primary */
+}
+div.dt-buttons span.dt-button-down-arrow {
+    position: relative;
+    top: -0.125rem; /* -top-0.5 */
+    font-size: 0.75rem; /* text-xs */
+    padding-left: 0.625rem; /* pl-2.5 */
+    line-height: 1; /* leading-none */
+    opacity: 0.6; /* opacity-60 */
+}
+div.dt-buttons div.dt-button-split {
+    display: inline-block;
+}
+div.dt-buttons div.dt-button-split .dt-button:first-child {
+    margin-right: 0;
+}
+div.dt-buttons div.dt-button-split .dt-button:last-child {
+    margin-left: -1px; /* -ml-px */
+    padding-left: 0.75rem; /* pl-3 */
+    padding-right: 0.75rem; /* pr-3 */
+    z-index: 2;
+}
+div.dt-buttons div.dt-button-split .dt-button:last-child span {
+    padding-left: 0;
+}
+
+div.dt-button-collection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13rem; /* w-52 */
+    margin-top: 0.25rem; /* mt-1 */
+    margin-left: 0.125rem; /* mx-0.5 */
+    margin-right: 0.125rem; /* mx-0.5 */
+    padding-top: 0.75rem; /* py-3 */
+    padding-bottom: 0.75rem; /* py-3 */
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-gray-400) / 1); /* border-gray-400 */
+    background-color: rgb(var(--color-white) / 1); /* bg-white */
+    overflow: hidden;
+    z-index: 2002;
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    box-sizing: border-box;
+}
+div.dt-button-collection .dt-button {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0; /* flex-none */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* bg-none */
+    margin: 0;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    border-width: 0; /* border-none */
+    text-align: left;
+    cursor: pointer;
+    color: inherit;
+}
+div.dt-button-collection .dt-button.dt-button-active {
+    background-color: rgb(var(--color-dt-primary-light) / 1); /* bg-dt-primary-light */
+    box-shadow: none;
+}
+div.dt-button-collection .dt-button.disabled {
+    cursor: default;
+    opacity: 0.4; /* opacity-40 */
+}
+div.dt-button-collection .dt-button:hover:not(.disabled) {
+    border-width: 0; /* border-none */
+    background-color: rgb(var(--color-dt-primary-light) / 1); /* bg-dt-primary-light */
+    box-shadow: none;
+}
+div.dt-button-collection div.dt-button-split {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: stretch;
+}
+div.dt-button-collection div.dt-button-split button.dt-button {
+    margin: 0;
+    display: inline-block;
+    width: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 3rem; /* basis-12 (assuming 1rem = 16px, so 12*4 = 48px = 3rem) */
+}
+div.dt-button-collection div.dt-button-split button.dt-button-split-drop {
+    min-width: 33px;
+    flex-shrink: 0; /* flex-none */
+}
+
+div.dt-button-collection.fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px; /* -ml-[75px] */
+    border-radius: 0.375rem; /* rounded-md */
+    background-color: rgb(var(--color-white) / 1); /* bg-white */
+    padding: 0.5rem; /* p-2 */
+}
+
+div.dt-button-collection.fixed .dt-button {
+    border-radius: 0.375rem; /* rounded-md */
+    background-color: rgb(var(--color-gray-100) / 1); /* bg-gray-100 */
+}
+div.dt-button-collection.fixed.two-column {
+    margin-left: -13rem; /* -ml-52 */
+}
+div.dt-button-collection.fixed.three-column {
+    margin-left: -225px; /* -ml-[225px] */
+}
+div.dt-button-collection.fixed.four-column {
+    margin-left: -300px; /* -ml-[300px] */
+}
+div.dt-button-collection.fixed.columns {
+    margin-left: -409px; /* -ml-[409px] */
+}
+@media screen and (max-width: 1024px) {
+    div.dt-button-collection.fixed.columns {
+        margin-left: -308px; /* -ml-[308px] */
+    }
+}
+@media screen and (max-width: 640px) {
+    div.dt-button-collection.fixed.columns {
+        margin-left: -203px; /* -ml-[203px] */
+    }
+}
+@media screen and (max-width: 460px) {
+    div.dt-button-collection.fixed.columns {
+        margin-left: -100px; /* -ml-[100px] */
+    }
+}
+div.dt-button-collection.fixed > :last-child {
+    max-height: 100vh; /* max-h-screen */
+    overflow: auto;
+}
+
+div.dt-button-collection.two-column > :last-child,
+div.dt-button-collection.three-column > :last-child,
+div.dt-button-collection.four-column > :last-child {
+    display: block;
+    padding-bottom: 1px; /* pb-px */
+    columns: 2;
+    gap: 0.5rem; /* gap-2 */
+}
+div.dt-button-collection.two-column > :last-child > *,
+div.dt-button-collection.three-column > :last-child > *,
+div.dt-button-collection.four-column > :last-child > * {
+    break-inside: avoid;
+}
+div.dt-button-collection.two-column {
+    width: 400px; /* w-[400px] */
+}
+div.dt-button-collection.two-column > :last-child {
+    padding-bottom: 1px; /* pb-px */
+    columns: 2;
+}
+div.dt-button-collection.three-column {
+    width: 450px; /* w-[450px] */
+}
+div.dt-button-collection.three-column > :last-child {
+    padding-bottom: 1px; /* pb-px */
+    columns: 3;
+}
+div.dt-button-collection.four-column {
+    width: 600px; /* w-[600px] */
+}
+div.dt-button-collection.four-column > :last-child {
+    padding-bottom: 1px; /* pb-px */
+    columns: 4;
+}
+div.dt-button-collection .dt-button {
+    border-radius: 0; /* rounded-none */
+}
+div.dt-button-collection.columns {
+    width: auto;
+}
+div.dt-button-collection.columns > :last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.375rem; /* gap-1.5 */
+    width: 818px; /* w-[818px] */
+    padding-bottom: 1px; /* pb-px */
+}
+div.dt-button-collection.columns > :last-child .dt-button {
+    min-width: 200px;
+    flex-shrink: 0; /* flex-none */
+    flex-grow: 1;
+}
+div.dt-button-collection.columns.dtb-b3 > :last-child,
+div.dt-button-collection.columns.dtb-b2 > :last-child,
+div.dt-button-collection.columns.dtb-b1 > :last-child {
+    justify-content: space-between;
+}
+div.dt-button-collection.columns.dtb-b3 .dt-button {
+    flex-basis: 32%; /* basis-[32%] */
+    flex-grow: 1; /* flex-auto */
+}
+div.dt-button-collection.columns.dtb-b2 .dt-button {
+    flex-basis: 48%; /* basis-[48%] */
+    flex-grow: 1; /* flex-auto */
+}
+div.dt-button-collection.columns.dtb-b1 .dt-button {
+    flex-basis: 100%; /* basis-full */
+    flex-grow: 1; /* flex-auto */
+}
+@media screen and (max-width: 1024px) {
+    div.dt-button-collection.columns > :last-child {
+        width: 612px; /* w-[612px] */
+    }
+}
+@media screen and (max-width: 640px) {
+    div.dt-button-collection.columns > :last-child {
+        width: 406px; /* w-[406px] */
+    }
+    div.dt-button-collection.columns.dtb-b3 .dt-button {
+        flex-shrink: 0; /* flex-none */
+        flex-basis: 32%; /* basis-[32%] */
+    }
+}
+@media screen and (max-width: 460px) {
+    div.dt-button-collection.columns > :last-child {
+        width: 200px; /* w-[200px] */
+    }
+}
+
+div.dt-button-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; /* inset-0 */
+    background-color: rgb(var(--color-gray-900) / 0.7); /* bg-gray-900 bg-opacity-70 */
+    z-index: 2001;
+}
+
+.dt-button.processing {
+    color: rgb(var(--color-gray-400) / 1); /* text-gray-400 */
+}
+
+@media screen and (max-width: 640px) {
+    div.dt-buttons {
+        float: none;
+        text-align: center;
+    }
+}
+
+html.dark div.dt-buttons > .dt-button,
+html.dark div.dt-buttons > div.dt-button-split .dt-button {
+    border-color: rgb(var(--color-gray-700) / 1); /* border-gray-700 */
+    background-color: rgb(var(--color-gray-800) / 1); /* bg-gray-800 */
+    color: rgb(var(--color-gray-200) / 1); /* text-gray-200 */
+}
+html.dark div.dt-buttons > .dt-button.dt-button-active:not(.disabled),
+html.dark div.dt-buttons > div.dt-button-split .dt-button.dt-button-active:not(.disabled) {
+    background-color: rgb(var(--color-gray-700) / 1); /* bg-gray-700 */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+}
+html.dark div.dt-buttons > .dt-button.dt-button-active:not(.disabled):hover:not(.disabled),
+html.dark div.dt-buttons > div.dt-button-split .dt-button.dt-button-active:not(.disabled):hover:not(.disabled) {
+    background-color: rgb(var(--color-gray-600) / 1); /* bg-gray-600 */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+}
+html.dark div.dt-buttons > .dt-button:hover:not(.disabled),
+html.dark div.dt-buttons > div.dt-button-split .dt-button:hover:not(.disabled) {
+    background-color: rgb(var(--color-gray-700) / 1); /* bg-gray-700 */
+}
+html.dark div.dt-buttons > .dt-button:focus:not(.disabled),
+html.dark div.dt-buttons > div.dt-button-split .dt-button:focus:not(.disabled) {
+    outline: none;
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px rgb(var(--color-dt-primary-DEFAULT) / 1); /* ring-2 ring-dt-primary */
+}
+html.dark div.dt-buttons > div.dt-button-split .dt-button:first-child {
+    border-right-width: 1px; /* border-r */
+    border-color: rgb(var(--color-gray-800) / 1); /* border-gray-800 */
+}
+html.dark div.dt-buttons > div.dt-button-split .dt-button:first-child:hover {
+    border-right-width: 1px; /* border-r */
+    border-color: rgb(var(--color-gray-700) / 1); /* border-gray-700 */
+}
+html.dark div.dt-buttons > div.dt-button-split .dt-button:last-child:hover {
+    border-left-width: 1px; /* border-l */
+    border-color: rgb(var(--color-gray-700) / 1); /* border-gray-700 */
+}
+html.dark div.dt-button-collection {
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-gray-800) / 1); /* border-gray-800 */
+    background-color: rgb(var(--color-gray-900) / 1); /* bg-gray-900 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+html.dark div.dt-button-info {
+    background-color: rgb(var(--color-gray-800) / 1); /* bg-gray-800 */
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-gray-800) / 1); /* border-gray-800 */
+}
+
+table.dataTable tbody td.dt-control {
+    text-align: center;
+    cursor: pointer;
+}
+table.dataTable tbody td.dt-control:before {
+    display: inline-block;
+    box-sizing: border-box;
+    content: '';
+    border-top-width: 5px; /* border-t-[5px] */
+    border-left-width: 10px; /* border-l-[10px] */
+    border-bottom-width: 5px; /* border-b-[5px] */
+    border-right-width: 0; /* border-r-0 */
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: rgb(var(--color-dt-primary-DEFAULT) / 0.5); /* border-l-dt-primary/50 */
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+table.dataTable tbody tr.dt-hasChild td.dt-control:before {
+    border-top-width: 10px; /* border-t-[10px] */
+    border-left-width: 5px; /* border-l-[5px] */
+    border-bottom-width: 0; /* border-b-0 */
+    border-right-width: 5px; /* border-r-[5px] */
+    border-top-color: rgb(var(--color-dt-primary-DEFAULT) / 0.5); /* border-t-dt-primary/50 */
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+table.dataTable tfoot:empty {
+    display: none;
+}
+html.dark table.dataTable td.dt-control:before,
+:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
+:root[data-theme=dark] table.dataTable td.dt-control:before {
+    border-left-color: rgb(var(--color-white) / 0.5); /* border-l-white/50 */
+}
+html.dark table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+    border-top-color: rgb(var(--color-white) / 0.5); /* border-t-white/50 */
+    border-left-color: transparent;
+}
+
+div.dt-scroll {
+    width: 100%;
+}
+
+div.dt-scroll-body thead tr,
+div.dt-scroll-body tfoot tr {
+    height: 0;
+}
+div.dt-scroll-body thead tr th, div.dt-scroll-body thead tr td,
+div.dt-scroll-body tfoot tr th,
+div.dt-scroll-body tfoot tr td {
+    height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+}
+div.dt-scroll-body thead tr th div.dt-scroll-sizing, div.dt-scroll-body thead tr td div.dt-scroll-sizing,
+div.dt-scroll-body tfoot tr th div.dt-scroll-sizing,
+div.dt-scroll-body tfoot tr td div.dt-scroll-sizing {
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+table.dataTable thead > tr > th:active,
+table.dataTable thead > tr > td:active {
+    outline: none;
+}
+
+
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order {
+    position: relative;
+    width: 12px; /* w-[12px] */
+    height: 20px; /* h-[20px] */
+}
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
+    left: 0;
+    opacity: 0.125; /* opacity-[0.125] */
+    line-height: 9px; /* leading-[9px] */
+    font-size: 0.8em; /* text-[0.8em] */
+}
+table.dataTable thead > tr > th.dt-orderable-asc, table.dataTable thead > tr > th.dt-orderable-desc,
+table.dataTable thead > tr > td.dt-orderable-asc,
+table.dataTable thead > tr > td.dt-orderable-desc {
+    cursor: pointer;
+}
+table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > tr > th.dt-orderable-desc:hover,
+table.dataTable thead > tr > td.dt-orderable-asc:hover,
+table.dataTable thead > tr > td.dt-orderable-desc:hover {
+    outline: 2px solid rgb(var(--color-black) / 0.05); /* outline outline-2 outline-offset-[-2px] outline-black/5 */
+    outline-offset: -2px;
+}
+table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
+    opacity: 0.6; /* opacity-60 */
+}
+table.dataTable thead > tr > th.sorting_desc_disabled span.dt-column-order:after, table.dataTable thead > tr > th.sorting_asc_disabled span.dt-column-order:before,
+table.dataTable thead > tr > td.sorting_desc_disabled span.dt-column-order:after,
+table.dataTable thead > tr > td.sorting_asc_disabled span.dt-column-order:before {
+    display: none;
+}
+table.dataTable thead > tr > th:active,
+table.dataTable thead > tr > td:active {
+    outline: none;
+}
+table.dataTable thead > tr > th div.dt-column-header span.dt-column-title,
+table.dataTable thead > tr > th div.dt-column-footer span.dt-column-title,
+table.dataTable thead > tr > td div.dt-column-header span.dt-column-title,
+table.dataTable thead > tr > td div.dt-column-footer span.dt-column-title,
+table.dataTable tfoot > tr > th div.dt-column-header span.dt-column-title,
+table.dataTable tfoot > tr > th div.dt-column-footer span.dt-column-title,
+table.dataTable tfoot > tr > td div.dt-column-header span.dt-column-title,
+table.dataTable tfoot > tr > td div.dt-column-footer span.dt-column-title {
+    flex-grow: 1; /* flex-grow */
+}
+table.dataTable thead > tr > th div.dt-column-header span.dt-column-title:empty,
+table.dataTable thead > tr > th div.dt-column-footer span.dt-column-title:empty,
+table.dataTable thead > tr > td div.dt-column-header span.dt-column-title:empty,
+table.dataTable thead > tr > td div.dt-column-footer span.dt-column-title:empty,
+table.dataTable tfoot > tr > th div.dt-column-header span.dt-column-title:empty,
+table.dataTable tfoot > tr > th div.dt-column-footer span.dt-column-title:empty,
+table.dataTable tfoot > tr > td div.dt-column-header span.dt-column-title:empty,
+table.dataTable tfoot > tr > td div.dt-column-footer span.dt-column-title:empty {
+    display: none;
+}
+
+div.dt-scroll-body > table.dataTable > thead > tr > th,
+div.dt-scroll-body > table.dataTable > thead > tr > td {
+    overflow: hidden;
+}
+
+:root.dark table.dataTable thead > tr > th.dt-orderable-asc:hover, :root.dark table.dataTable thead > tr > th.dt-orderable-desc:hover,
+:root.dark table.dataTable thead > tr > td.dt-orderable-asc:hover,
+:root.dark table.dataTable tfoot > tr > td.dt-orderable-desc:hover {
+    outline: 2px solid rgb(var(--color-white) / 0.05); /* outline outline-2 outline-offset-[-2px] outline-white/5 */
+    outline-offset: -2px;
+}
+
+div.dt-processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px; /* w-[200px] */
+    margin-left: -100px; /* -ml-[100px] */
+    margin-top: -22px; /* -mt-[22px] */
+    text-align: center;
+    padding: 0.125rem; /* p-0.5 */
+    z-index: 10;
+}
+div.dt-processing > div:last-child {
+    position: relative;
+    width: 80px; /* w-[80px] */
+    height: 15px; /* h-[15px] */
+    margin-top: 1rem; /* my-4 */
+    margin-bottom: 1rem; /* my-4 */
+    margin-left: auto;
+    margin-right: auto;
+}
+div.dt-processing > div:last-child > div {
+    position: absolute;
+    top: 0;
+    width: 13px; /* w-[13px] */
+    height: 13px; /* h-[13px] */
+    border-radius: 9999px; /* rounded-full */
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* bg-dt-primary */
+    animation: datatables-loader-bounce 0.6s infinite cubic-bezier(0, 1, 1, 0);
+}
+div.dt-processing > div:last-child > div:nth-child(1) {
+    left: 0.5rem; /* left-2 */
+    animation-name: datatables-loader-1;
+}
+div.dt-processing > div:last-child > div:nth-child(2) {
+    left: 0.5rem; /* left-2 */
+    animation-name: datatables-loader-2;
+}
+div.dt-processing > div:last-child > div:nth-child(3) {
+    left: 2rem; /* left-8 */
+    animation-name: datatables-loader-2;
+}
+div.dt-processing > div:last-child > div:nth-child(4) {
+    left: 56px; /* left-[56px] */
+    animation-name: datatables-loader-3;
+}
+@keyframes datatables-loader-1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes datatables-loader-3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes datatables-loader-2 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(24px) translateY(0);
+    }
+}
+table.dataTable.nowrap th, table.dataTable.nowrap td {
+    white-space: nowrap;
+}
+table.dataTable th,
+table.dataTable td {
+    box-sizing: border-box;
+}
+table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+    text-align: right;
+}
+table.dataTable th.dt-type-numeric div.dt-column-header,
+table.dataTable th.dt-type-numeric div.dt-column-footer, table.dataTable th.dt-type-date div.dt-column-header,
+table.dataTable th.dt-type-date div.dt-column-footer,
+table.dataTable td.dt-type-numeric div.dt-column-header,
+table.dataTable td.dt-type-numeric div.dt-column-footer,
+table.dataTable td.dt-type-date div.dt-column-header,
+table.dataTable td.dt-type-date div.dt-column-footer {
+    flex-direction: row-reverse;
+}
+table.dataTable th.dt-left,
+table.dataTable td.dt-left {
+    text-align: left;
+}
+table.dataTable th.dt-left div.dt-column-header,
+table.dataTable th.dt-left div.dt-column-footer,
+table.dataTable td.dt-left div.dt-column-header,
+table.dataTable td.dt-left div.dt-column-footer {
+    flex-direction: row;
+}
+table.dataTable th.dt-center,
+table.dataTable td.dt-center {
+    text-align: center;
+}
+table.dataTable th.dt-right,
+table.dataTable td.dt-right {
+    text-align: right;
+}
+table.dataTable th.dt-right div.dt-column-header,
+table.dataTable th.dt-right div.dt-column-footer,
+table.dataTable td.dt-right div.dt-column-header,
+table.dataTable td.dt-right div.dt-column-footer {
+    flex-direction: row-reverse;
+}
+table.dataTable th.dt-justify,
+table.dataTable td.dt-justify {
+    text-align: justify;
+}
+table.dataTable th.dt-justify div.dt-column-header,
+table.dataTable th.dt-justify div.dt-column-footer,
+table.dataTable td.dt-justify div.dt-column-header,
+table.dataTable td.dt-justify div.dt-column-footer {
+    flex-direction: row;
+}
+table.dataTable th.dt-nowrap,
+table.dataTable td.dt-nowrap {
+    white-space: nowrap;
+}
+table.dataTable th.dt-empty,
+table.dataTable td.dt-empty {
+    text-align: center;
+    vertical-align: top;
+}
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tfoot th,
+table.dataTable tfoot td {
+    text-align: left;
+}
+table.dataTable thead th.dt-head-left,
+table.dataTable thead td.dt-head-left,
+table.dataTable tfoot th.dt-head-left,
+table.dataTable tfoot td.dt-head-left {
+    text-align: left;
+}
+table.dataTable thead th.dt-head-left div.dt-column-header,
+table.dataTable thead th.dt-head-left div.dt-column-footer,
+table.dataTable thead td.dt-head-left div.dt-column-header,
+table.dataTable thead td.dt-head-left div.dt-column-footer,
+table.dataTable tfoot th.dt-head-left div.dt-column-header,
+table.dataTable tfoot th.dt-head-left div.dt-column-footer,
+table.dataTable tfoot td.dt-head-left div.dt-column-header,
+table.dataTable tfoot td.dt-head-left div.dt-column-footer {
+    flex-direction: row;
+}
+table.dataTable thead th.dt-head-center,
+table.dataTable thead td.dt-head-center,
+table.dataTable tfoot th.dt-head-center,
+table.dataTable tfoot td.dt-head-center {
+    text-align: center;
+}
+table.dataTable thead th.dt-head-right,
+table.dataTable thead td.dt-head-right,
+table.dataTable tfoot th.dt-head-right,
+table.dataTable tfoot td.dt-head-right {
+    text-align: right;
+}
+table.dataTable thead th.dt-head-right div.dt-column-header,
+table.dataTable thead th.dt-head-right div.dt-column-footer,
+table.dataTable thead td.dt-head-right div.dt-column-header,
+table.dataTable thead td.dt-head-right div.dt-column-footer,
+table.dataTable tfoot th.dt-head-right div.dt-column-header,
+table.dataTable tfoot th.dt-head-right div.dt-column-footer,
+table.dataTable tfoot td.dt-head-right div.dt-column-header,
+table.dataTable tfoot td.dt-head-right div.dt-column-footer {
+    flex-direction: row-reverse;
+}
+table.dataTable thead th.dt-head-justify,
+table.dataTable thead td.dt-head-justify,
+table.dataTable tfoot th.dt-head-justify,
+table.dataTable tfoot td.dt-head-justify {
+    text-align: justify;
+}
+table.dataTable thead th.dt-head-justify div.dt-column-header,
+table.dataTable thead th.dt-head-justify div.dt-column-footer,
+table.dataTable thead td.dt-head-justify div.dt-column-header,
+table.dataTable thead td.dt-head-justify div.dt-column-footer,
+table.dataTable tfoot th.dt-head-justify div.dt-column-header,
+table.dataTable tfoot th.dt-head-justify div.dt-column-footer,
+table.dataTable tfoot td.dt-head-justify div.dt-column-header,
+table.dataTable tfoot td.dt-head-justify div.dt-column-footer {
+    flex-direction: row;
+}
+table.dataTable thead th.dt-head-nowrap,
+table.dataTable thead td.dt-head-nowrap,
+table.dataTable tfoot th.dt-head-nowrap,
+table.dataTable tfoot td.dt-head-nowrap {
+    white-space: nowrap;
+}
+table.dataTable tbody th.dt-body-left,
+table.dataTable tbody td.dt-body-left {
+    text-align: left;
+}
+table.dataTable tbody th.dt-body-center,
+table.dataTable tbody td.dt-body-center {
+    text-align: center;
+}
+table.dataTable tbody th.dt-body-right,
+table.dataTable tbody td.dt-body-right {
+    text-align: right;
+}
+table.dataTable tbody th.dt-body-justify,
+table.dataTable tbody td.dt-body-justify {
+    text-align: justify;
+}
+table.dataTable tbody th.dt-body-nowrap,
+table.dataTable tbody td.dt-body-nowrap {
+    white-space: nowrap;
+}
+
+:root {
+    /* CSS değişkenleri burada kalmaya devam ediyor, çünkü DataTables doğrudan kullanıyor. */
+}
+
+table.dataTable {
+    width: 100%; /* w-full */
+    margin-left: auto;
+    margin-right: auto; /* mx-auto */
+    border-spacing: 0;
+}
+table.dataTable thead th,
+table.dataTable tfoot th {
+    font-weight: 700; /* font-bold */
+}
+table.dataTable > thead > tr > th,
+table.dataTable > thead > tr > td {
+    padding: 0.625rem; /* p-2.5 */
+    border-bottom-width: 1px; /* border-b */
+    border-color: rgb(0 0 0 / 0.3); /* border-black/30 */
+}
+table.dataTable > thead > tr > th:active,
+table.dataTable > thead > tr > td:active {
+    outline: none;
+}
+table.dataTable > tfoot > tr > th,
+table.dataTable > tfoot > tr > td {
+    border-top-width: 1px; /* border-t */
+    border-color: rgb(0 0 0 / 0.3); /* border-black/30 */
+    padding-top: 0.625rem; /* pt-2.5 */
+    padding-left: 0.625rem; /* px-2.5 */
+    padding-right: 0.625rem; /* px-2.5 */
+    padding-bottom: 0.375rem; /* pb-1.5 */
+}
+table.dataTable > tbody > tr {
+    background-color: transparent;
+}
+table.dataTable > tbody > tr:first-child > * {
+    border-top-width: 0;
+}
+table.dataTable > tbody > tr:last-child > * {
+    border-bottom-width: 0;
+}
+table.dataTable > tbody > tr.selected > * {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / 0.9);
+    color: rgb(var(--color-white) / 1); /* text-white */
+}
+table.dataTable > tbody > tr.selected a {
+    color: rgb(var(--dt-row-selected-link));
+}
+table.dataTable > tbody > tr > th,
+table.dataTable > tbody > tr > td {
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    padding-left: 0.5rem; /* px-2.5 */
+    padding-right: 0.625rem; /* px-2.5 */
+}
+table.dataTable.row-border > tbody > tr > *, table.dataTable.display > tbody > tr > * {
+    border-top-width: 1px; /* border-t */
+    border-color: rgb(0 0 0 / 0.15); /* border-black/15 */
+}
+table.dataTable.row-border > tbody > tr:first-child > *, table.dataTable.display > tbody > tr:first-child > * {
+    border-top-width: 0;
+}
+table.dataTable.row-border > tbody > tr.selected + tr.selected > td, table.dataTable.display > tbody > tr.selected + tr.selected > td {
+    border-top-color: rgb(var(--dt-row-selected) / 0.65);
+}
+table.dataTable.cell-border > tbody > tr > * {
+    border-top-width: 1px; /* border-t */
+    border-right-width: 1px; /* border-r */
+    border-color: rgb(0 0 0 / 0.15); /* border-black/15 */
+}
+table.dataTable.cell-border > tbody > tr > *:first-child {
+    border-left-width: 1px; /* border-l */
+    border-color: rgb(0 0 0 / 0.15); /* border-black/15 */
+}
+table.dataTable.cell-border > tbody > tr:first-child > * {
+    border-top-width: 1px; /* border-t */
+    border-color: rgb(0 0 0 / 0.3); /* border-black/30 */
+}
+table.dataTable.stripe > tbody > tr:nth-child(odd) > *, table.dataTable.display > tbody > tr:nth-child(odd) > * {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-stripe) / var(--dt-row-stripe-alpha));
+}
+table.dataTable.stripe > tbody > tr:nth-child(odd).selected > *, table.dataTable.display > tbody > tr:nth-child(odd).selected > * {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / var(--dt-row-selected-stripe-alpha));
+}
+table.dataTable.hover > tbody > tr:hover > *, table.dataTable.display > tbody > tr:hover > * {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-hover) / var(--dt-row-hover-alpha));
+}
+table.dataTable.hover > tbody > tr.selected:hover > *, table.dataTable.display > tbody > tr.selected:hover > * {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected)) !important;
+}
+table.dataTable.order-column > tbody tr > .sorting_1,
+table.dataTable.order-column > tbody tr > .sorting_2,
+table.dataTable.order-column > tbody tr > .sorting_3, table.dataTable.display > tbody tr > .sorting_1,
+table.dataTable.display > tbody tr > .sorting_2,
+table.dataTable.display > tbody tr > .sorting_3 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-column-ordering) / var(--dt-column-ordering-alpha));
+}
+table.dataTable.order-column > tbody tr.selected > .sorting_1,
+table.dataTable.order-column > tbody tr.selected > .sorting_2,
+table.dataTable.order-column > tbody tr.selected > .sorting_3, table.dataTable.display > tbody tr.selected > .sorting_1,
+table.dataTable.display > tbody tr.selected > .sorting_2,
+table.dataTable.display > tbody tr.selected > .sorting_3 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / var(--dt-row-selected-column-ordering-alpha));
+}
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_1 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-column-ordering) / calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha)));
+}
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_2, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_2 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-column-ordering) / calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.007));
+}
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_3, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_3 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-column-ordering) / calc(var(--dt-row-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.015));
+}
+table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_1, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd).selected > .sorting_1 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha)));
+}
+table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_2, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd).selected > .sorting_2 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.007));
+}
+table.dataTable.display > tbody > tr:nth-child(odd).selected > .sorting_3, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd).selected > .sorting_3 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / calc(var(--dt-row-selected-stripe-alpha) + var(--dt-column-ordering-alpha) - 0.015));
+}
+table.dataTable.display tbody tr:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-column-ordering) / calc(var(--dt-row-hover-alpha) + var(--dt-column-ordering-alpha)));
+}
+table.dataTable.display tbody tr:hover > .sorting_2, table.dataTable.order-column.hover tbody tr:hover > .sorting_2 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-column-ordering) / calc(var(--dt-row-hover-alpha) + var(--dt-column-ordering-alpha) - 0.007));
+}
+table.dataTable.display tbody tr:hover > .sorting_3, table.dataTable.order-column.hover tbody tr:hover > .sorting_3 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-column-ordering) / calc(var(--dt-row-hover-alpha) + var(--dt-column-ordering-alpha) - 0.015));
+}
+table.dataTable.display tbody tr:hover.selected > .sorting_1, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_1 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / calc(var(--dt-row-selected-hover-alpha) + var(--dt-column-ordering-alpha)));
+}
+table.dataTable.display tbody tr:hover.selected > .sorting_2, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_2 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / calc(var(--dt-row-selected-hover-alpha) + var(--dt-column-ordering-alpha) - 0.007));
+}
+table.dataTable.display tbody tr:hover.selected > .sorting_3, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
+    box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected) / calc(var(--dt-row-selected-hover-alpha) + var(--dt-column-ordering-alpha) - 0.015));
+}
+table.dataTable.compact thead th,
+table.dataTable.compact thead td,
+table.dataTable.compact tfoot th,
+table.dataTable.compact tfoot td,
+table.dataTable.compact tbody th,
+table.dataTable.compact tbody td {
+    padding: 0.25rem; /* p-1 */
+}
+div.dt-container div.dt-layout-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.75rem; /* my-3 */
+    margin-bottom: 0.75rem; /* my-3 */
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+    justify-content: flex-start;
+    margin-right: auto;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+    justify-content: flex-end;
+    margin-left: auto;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell:empty {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    div.dt-container div.dt-layout-row:not(.dt-layout-table) {
+        display: block;
+    }
+    div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell {
+        display: block;
+        text-align: center;
+    }
+    div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell > * {
+        margin-top: 0.5rem; /* my-2 */
+        margin-bottom: 0.5rem; /* my-2 */
+    }
+    div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell.dt-layout-start {
+        margin-right: 0;
+    }
+    div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell.dt-layout-end {
+        margin-left: 0;
+    }
+}
+div.dt-container div.dt-layout-start > *:not(:last-child) {
+    margin-right: 1rem; /* mr-4 */
+}
+div.dt-container div.dt-layout-end > *:not(:first-child) {
+    margin-left: 1rem; /* ml-4 */
+}
+div.dt-container div.dt-layout-full {
+    width: 100%;
+}
+div.dt-container div.dt-layout-full > *:only-child {
+    margin-left: auto;
+    margin-right: auto; /* mx-auto */
+}
+div.dt-container div.dt-layout-table > div {
+    display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+    div.dt-container div.dt-layout-start > *:not(:last-child) {
+        margin-right: 0;
+    }
+    div.dt-container div.dt-layout-end > *:not(:first-child) {
+        margin-left: 0;
+    }
+}
+/*
+ * Control feature layout
+ */
+div.dt-container {
+    position: relative;
+    clear: both;
+}
+div.dt-container .dt-search input {
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-gray-400) / 1); /* border-gray-400 */
+    border-radius: 0.25rem; /* rounded */
+    padding: 0.375rem; /* p-1.5 */
+    background-color: transparent;
+    color: inherit;
+    margin-left: 0.125rem; /* ml-0.5 */
+}
+div.dt-container .dt-input {
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-gray-400) / 1); /* border-gray-400 */
+    border-radius: 0.25rem; /* rounded */
+    padding: 0.375rem; /* p-1.5 */
+    background-color: transparent;
+    color: inherit;
+}
+div.dt-container select.dt-input {
+    padding: 0.5rem; /* p-2 */
+}
+div.dt-container .dt-paging .dt-paging-button {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    margin-left: 0.125rem; /* ml-0.5 */
+    text-align: center;
+    text-decoration: none !important; /* !no-underline */
+    cursor: pointer;
+    color: inherit !important; /* !text-inherit */
+    border-width: 1px; /* border */
+    border-color: transparent;
+    border-radius: 0.25rem; /* rounded */
+    background-color: transparent;
+}
+div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
+    color: rgb(var(--color-white) / 1) !important; /* !text-white */
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* border-dt-primary */
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* bg-dt-primary */
+}
+div.dt-container .dt-paging .dt-paging-button.disabled, div.dt-container .dt-paging .dt-paging-button.disabled:hover, div.dt-container .dt-paging .dt-paging-button.disabled:active {
+    cursor: default;
+    color: rgb(0 0 0 / 0.5) !important; /* !text-black/50 */
+    border-width: 1px; /* border */
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+}
+div.dt-container .dt-paging .dt-paging-button:hover {
+    color: rgb(var(--color-white) / 1) !important; /* !text-white */
+    border-width: 1px; /* border */
+    border-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* border-dt-primary */
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* bg-dt-primary */
+}
+div.dt-container .dt-paging .dt-paging-button:active {
+    outline: none;
+    background-color: rgb(var(--color-dt-primary-DEFAULT) / 1); /* bg-dt-primary */
+    box-shadow: inset 0 0 3px #111111;
+}
+div.dt-container .dt-paging .ellipsis {
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+div.dt-container .dt-length,
+div.dt-container .dt-search,
+div.dt-container .dt-info,
+div.dt-container .dt-processing,
+div.dt-container .dt-paging {
+    color: inherit;
+}
+div.dt-container .dataTables_scroll {
+    clear: both;
+}
+div.dt-container .dataTables_scroll div.dt-scroll-body {
+    /* -webkit-overflow-scrolling: touch; Tailwind'de doğrudan karşılığı yok, genellikle mobil Safari için optimize bir CSS özelliğidir. */
+}
+div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > th, div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > td, div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > th, div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > td {
+    vertical-align: middle;
+}
+div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > th > div.dataTables_sizing,
+div.dt-container .dataTables_scroll div.dt-scroll-body > table > thead > tr > td > div.dataTables_sizing, div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > th > div.dataTables_sizing,
+div.dt-container .dataTables_scroll div.dt-scroll-body > table > tbody > tr > td > div.dataTables_sizing {
+    height: 0;
+    overflow: hidden;
+    margin: 0 !important; /* !m-0 */
+    padding: 0 !important; /* !p-0 */
+}
+div.dt-container.dt-empty-footer tbody > tr:last-child > * {
+    border-bottom-width: 1px; /* border-b */
+    border-color: rgb(0 0 0 / 0.3); /* border-black/30 */
+}
+div.dt-container.dt-empty-footer .dt-scroll-body {
+    border-bottom-width: 1px; /* border-b */
+    border-color: rgb(0 0 0 / 0.3); /* border-black/30 */
+}
+div.dt-container.dt-empty-footer .dt-scroll-body tbody > tr:last-child > * {
+    border-bottom-width: 0;
+}
+
+html.dark {
+    /* CSS değişkenleri burada kalmaya devam ediyor, çünkü DataTables doğrudan kullanıyor. */
+}
+html.dark table.dataTable > thead > tr > th,
+html.dark table.dataTable > thead > tr > td {
+    border-bottom-width: 1px; /* border-b */
+    border-color: #595b5e; /* border-[#595b5e] */
+}
+html.dark table.dataTable > thead > tr > th:active,
+html.dark table.dataTable > thead > tr > td:active {
+    outline: none;
+}
+html.dark table.dataTable > tfoot > tr > th,
+html.dark table.dataTable > tfoot > tr > td {
+    border-top-width: 1px; /* border-t */
+    border-color: #595b5e; /* border-[#595b5e] */
+}
+html.dark table.dataTable.row-border > tbody > tr > *, html.dark table.dataTable.display > tbody > tr > * {
+    border-top-width: 1px; /* border-t */
+    border-color: #404346; /* border-[#404346] */
+}
+html.dark table.dataTable.row-border > tbody > tr:first-child > *, html.dark table.dataTable.display > tbody > tr:first-child > * {
+    border-top-width: 0;
+}
+html.dark table.dataTable.row-border > tbody > tr.selected + tr.selected > td, html.dark table.dataTable.display > tbody > tr.selected + tr.selected > td {
+    border-top-color: rgb(96 165 250 / 0.65); /* border-t-blue-500/65 */
+}
+html.dark table.dataTable.cell-border > tbody > tr > th,
+html.dark table.dataTable.cell-border > tbody > tr > td {
+    border-top-width: 1px; /* border-t */
+    border-right-width: 1px; /* border-r */
+    border-color: #404346; /* border-[#404346] */
+}
+html.dark table.dataTable.cell-border > tbody > tr > th:first-child,
+html.dark table.dataTable.cell-border > tbody > tr > td:first-child {
+    border-left-width: 1px; /* border-l */
+    border-color: #404346; /* border-[#404346] */
+}
+html.dark .dt-container.dt-empty-footer table.dataTable {
+    border-bottom-width: 1px; /* border-b */
+    border-color: #595b5e; /* border-[#595b5e] */
+}
+html.dark .dt-container .dt-search input,
+html.dark .dt-container .dt-length select {
+    border-width: 1px; /* border */
+    border-color: rgb(255 255 255 / 0.2); /* border-white/20 */
+    background-color: var(--dt-html-background); /* bg-[var(--dt-html-background)] */
+}
+html.dark .dt-container .dt-paging .dt-paging-button.current, html.dark .dt-container .dt-paging .dt-paging-button.current:hover {
+    border-width: 1px; /* border */
+    border-color: #595b5e; /* border-[#595b5e] */
+    background-color: rgb(255 255 255 / 0.15); /* bg-white/15 */
+}
+html.dark .dt-container .dt-paging .dt-paging-button.disabled, html.dark .dt-container .dt-paging .dt-paging-button.disabled:hover, html.dark .dt-container .dt-paging .dt-paging-button.disabled:active {
+    color: rgb(var(--color-gray-600) / 1) !important; /* !text-gray-600 */
+}
+html.dark .dt-container .dt-paging .dt-paging-button:hover {
+    border-width: 1px; /* border */
+    border-color: #353535; /* border-[#353535] */
+    background-color: #353535; /* bg-[#353535] */
+}
+html.dark .dt-container .dt-paging .dt-paging-button:active {
+    background-color: #3a3a3a; /* bg-[#3a3a3a] */
+}
+
+/*
+ * Overrides for RTL support
+ */
+*[dir=rtl] table.dataTable thead th,
+*[dir=rtl] table.dataTable thead td,
+*[dir=rtl] table.dataTable tfoot th,
+*[dir=rtl] table.dataTable tfoot td {
+    text-align: right;
+}
+*[dir=rtl] table.dataTable th.dt-type-numeric, *[dir=rtl] table.dataTable th.dt-type-date,
+*[dir=rtl] table.dataTable td.dt-type-numeric,
+*[dir=rtl] table.dataTable td.dt-type-date {
+    text-align: left;
+}
+*[dir=rtl] div.dt-container div.dt-layout-cell.dt-start {
+    text-align: right;
+}
+*[dir=rtl] div.dt-container div.dt-layout-cell.dt-end {
+    text-align: left;
+}
+*[dir=rtl] div.dt-container div.dt-search input {
+    margin-right: 0.125rem; /* mr-0.5 */
+    margin-left: 0;
+}
+
+/* RESPONSIVE DT CSS*/
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.child,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.child,
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty {
+    cursor: default !important; /* !cursor-default */
+}
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty:before {
+    display: none !important; /* !hidden */
+}
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control {
+    cursor: pointer;
+}
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+    margin-right: 0.5rem; /* mr-2 */
+    display: inline-block;
+    box-sizing: border-box;
+    content: '';
+    border-top-width: 5px; /* border-t-[5px] */
+    border-left-width: 10px; /* border-l-[10px] */
+    border-bottom-width: 5px; /* border-b-[5px] */
+    border-right-width: 0; /* border-r-0 */
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: rgb(0 0 0 / 0.5); /* border-l-black/50 */
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control.arrow-right::before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control.arrow-right::before {
+    border-top-width: 5px; /* border-t-[5px] */
+    border-left-width: 0; /* border-l-0 */
+    border-bottom-width: 5px; /* border-b-[5px] */
+    border-right-width: 10px; /* border-r-[10px] */
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: rgb(0 0 0 / 0.5); /* border-r-black/50 */
+}
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.dtr-expanded > th.dtr-control:before {
+    border-top-width: 10px; /* border-t-[10px] */
+    border-left-width: 5px; /* border-l-[5px] */
+    border-bottom-width: 0; /* border-b-0 */
+    border-right-width: 5px; /* border-r-[5px] */
+    border-style: solid;
+    border-top-color: rgb(0 0 0 / 0.5); /* border-t-black/50 */
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td.dtr-control,
+table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th.dtr-control {
+    padding-left: 0.333em; /* pl-[0.333em] */
+}
+table.dataTable.dtr-column > tbody > tr > td.dtr-control,
+table.dataTable.dtr-column > tbody > tr > th.dtr-control,
+table.dataTable.dtr-column > tbody > tr > td.control,
+table.dataTable.dtr-column > tbody > tr > th.control {
+    cursor: pointer;
+}
+table.dataTable.dtr-column > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr > th.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr > td.control:before,
+table.dataTable.dtr-column > tbody > tr > th.control:before {
+    display: inline-block;
+    box-sizing: border-box;
+    content: '';
+    border-top-width: 5px; /* border-t-[5px] */
+    border-left-width: 10px; /* border-l-[10px] */
+    border-bottom-width: 5px; /* border-b-[5px] */
+    border-right-width: 0; /* border-r-0 */
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: rgb(0 0 0 / 0.5); /* border-l-black/50 */
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+table.dataTable.dtr-column > tbody > tr > td.dtr-control.arrow-right::before,
+table.dataTable.dtr-column > tbody > tr > th.dtr-control.arrow-right::before,
+table.dataTable.dtr-column > tbody > tr > td.control.arrow-right::before,
+table.dataTable.dtr-column > tbody > tr > th.control.arrow-right::before {
+    border-top-width: 5px; /* border-t-[5px] */
+    border-left-width: 0; /* border-l-0 */
+    border-bottom-width: 5px; /* border-b-[5px] */
+    border-right-width: 10px; /* border-r-[10px] */
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: rgb(0 0 0 / 0.5); /* border-r-black/50 */
+}
+table.dataTable.dtr-column > tbody > tr.dtr-expanded td.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr.dtr-expanded th.dtr-control:before,
+table.dataTable.dtr-column > tbody > tr.dtr-expanded td.control:before,
+table.dataTable.dtr-column > tbody > tr.dtr-expanded th.control:before {
+    border-top-width: 10px; /* border-t-[10px] */
+    border-left-width: 5px; /* border-l-[5px] */
+    border-bottom-width: 0; /* border-b-0 */
+    border-right-width: 5px; /* border-r-[5px] */
+    border-style: solid;
+    border-top-color: rgb(0 0 0 / 0.5); /* border-t-black/50 */
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+table.dataTable > tbody > tr.child {
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+table.dataTable > tbody > tr.child:hover {
+    background-color: transparent !important;
+}
+table.dataTable > tbody > tr.child ul.dtr-details {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+table.dataTable > tbody > tr.child ul.dtr-details > li {
+    border-bottom: 1px solid #efefef;
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+}
+table.dataTable > tbody > tr.child ul.dtr-details > li:first-child {
+    padding-top: 0;
+}
+table.dataTable > tbody > tr.child ul.dtr-details > li:last-child {
+    padding-bottom: 0;
+    border-bottom-width: 0;
+}
+table.dataTable > tbody > tr.child span.dtr-title {
+    display: inline-block;
+    min-width: 75px; /* min-w-[75px] */
+    font-weight: 700; /* font-bold */
+}
+
+div.dtr-modal {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    padding-top: 10em; /* py-[10em] */
+    padding-bottom: 10em; /* py-[10em] */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+div.dtr-modal div.dtr-modal-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%; /* w-1/2 */
+    height: fit-content; /* h-fit */
+    max-height: 75%; /* max-h-[75%] */
+    overflow: auto;
+    margin: auto;
+    z-index: 102;
+    background-color: #f5f5f7; /* bg-[#f5f5f7] */
+    border: 1px solid #000000; /* border border-black */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+div.dtr-modal div.dtr-modal-content {
+    position: relative;
+    padding: 2.5rem; /* p-10 */
+}
+div.dtr-modal div.dtr-modal-content h2 {
+    margin-top: 0;
+}
+div.dtr-modal div.dtr-modal-close {
+    position: absolute;
+    top: 0.375rem; /* top-1.5 */
+    right: 0.375rem; /* right-1.5 */
+    width: 22px; /* w-[22px] */
+    height: 22px; /* h-[22px] */
+    text-align: center;
+    border-radius: 0.25rem; /* rounded */
+    cursor: pointer;
+    z-index: 10;
+}
+div.dtr-modal div.dtr-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    background-color: rgb(0 0 0 / 0.6); /* bg-black/60 */
+}
+
+@media screen and (max-width: 767px) {
+    div.dtr-modal div.dtr-modal-display {
+        width: 95%; /* w-[95%] */
+    }
+}
+html.dark table.dataTable > tbody > tr > td.dtr-control:before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr > td.dtr-control:before {
+    border-left-color: rgb(255 255 255 / 0.5) !important; /* !border-l-white/50 */
+}
+html.dark table.dataTable > tbody > tr > td.dtr-control.arrow-right::before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr > td.dtr-control.arrow-right::before {
+    border-right-color: rgb(255 255 255 / 0.5) !important; /* !border-r-white/50 */
+}
+html.dark table.dataTable > tbody > tr.dtr-expanded > td.dtr-control:before,
+html.dark table.dataTable > tbody > tr.dtr-expanded > th.dtr-control:before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr.dtr-expanded > td.dtr-control:before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr.dtr-expanded > th.dtr-control:before {
+    border-top-color: rgb(255 255 255 / 0.5) !important; /* !border-t-white/50 */
+    border-left-color: transparent !important; /* !border-l-transparent */
+    border-right-color: transparent !important; /* !border-r-transparent */
+}
+html.dark table.dataTable > tbody > tr.child ul.dtr-details > li,
+html[data-bs-theme=dark] table.dataTable > tbody > tr.child ul.dtr-details > li {
+    border-bottom-color: #404346; /* border-b-[#404346] */
+}
+html.dark div.dtr-modal div.dtr-modal-display,
+html[data-bs-theme=dark] div.dtr-modal div.dtr-modal-display {
+    background-color: #212529; /* bg-[#212529] */
+    border: 1px solid rgb(255 255 255 / 0.15); /* border border-white/15 */
+}
+.panel {
+    background-color: rgb(var(--color-white)); /* Beyaz arka plan */
+    border-radius: 0.5rem; /* Yuvarlak köşeler */
+    padding: 2.8rem; /* İç boşluk */
+    box-shadow: 0 4px 6px -1px rgba(var(--color-black), 0.1), 0 2px 4px -2px rgba(var(--color-black), 0.1); /* Hafif gölge */
+    /* Belki bir kenarlık ekleyebilirsin: */
+    /* border: 1px solid rgb(var(--color-gray-200)); */
+}
+
+html.dark .panel {
+    background-color: rgb(var(--color-gray-900));
+    box-shadow: 0 4px 6px -1px rgba(var(--color-black), 0.2), 0 2px 4px -2px rgba(var(--color-black), 0.2);
+}
+.dt-buttons {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.dt-search {
+    margin-bottom: 0.5rem;
+}
+.dt-info {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+select {
+    background-size: 1.5em 1.5em;
+    padding-right: 0.70rem !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+.bg-blue-600 {
+    background-color: #6366f1;
+}
+/* Modal container için z-index ve opacity ayarlarını netleştir */
+.fixed.inset-0.bg-black.bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Manuel override */
+    opacity: 1 !important; /* Opacity'nin modal iç div'e uygulanmasını engelle */
+}
+
+/* Modal iç div'in opacity ayarını kaldır */
+.fixed.inset-0.bg-black.bg-opacity-50 > div {
+    opacity: 1 !important;
+    background-color: white !important;
+}
+/* DataTables ve diğer genel stiller */
+
+div.dt-container .dt-search input {
+    border-color: rgb(var(--color-gray-400));
+}
+
+div.dt-container .dt-input {
+    border-color: rgb(var(--color-gray-400));
+}
+
+div.dt-container .dt-paging .dt-paging-button.current,
+div.dt-container .dt-paging .dt-paging-button.current:hover {
+    color: rgb(var(--color-white)) !important;
+    border-color: rgb(var(--color-dt-primary-DEFAULT));
+    background-color: rgb(var(--color-dt-primary-DEFAULT));
+}
+
+div.dt-container .dt-paging .dt-paging-button.disabled,
+div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled:active {
+    color: rgb(var(--color-gray-600)) !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+    border-color: rgb(var(--color-dt-primary-DEFAULT));
+    background-color: rgb(var(--color-dt-primary-DEFAULT));
+}
+
+div.dt-container .dt-paging .dt-paging-button:active {
+    background-color: rgb(var(--color-dt-primary-dark));
+}
+
+/* DataTables Genel Buton Stilleri (Copy, Excel, vs.) */
+div.dt-container .dt-buttons .dt-button {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0.125rem;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    color: rgb(var(--color-white)) !important;
+    border-width: 1px;
+    border-color: rgb(var(--color-dt-primary-DEFAULT));
+    border-radius: 0.25rem;
+    background-color: rgb(var(--color-dt-primary-DEFAULT));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Buton Hover ve Active Durumları */
+div.dt-container .dt-buttons .dt-button:hover {
+    background-color: rgb(var(--color-dt-primary-dark));
+    border-color: rgb(var(--color-dt-primary-dark));
+}
+
+div.dt-container .dt-buttons .dt-button:active {
+    outline: none;
+    background-color: rgb(var(--color-dt-primary-dark));
+    box-shadow: inset 0 0 3px rgba(var(--color-black), 0.5); /* --color-black'i boşluklu kabul eder */
+}
+
+/* "Yeni Post Ekle" Butonu İçin Kontrol (HTML'deki Tailwind sınıflarını kullanacak) */
+/* Eğer bg-blue-500 senin primary rengin olmasını istiyorsan, Tailwind config'de blue: { 500: 'rgb(var(--color-primary-DEFAULT) / <alpha-value>)' } gibi bir eşleme yapmalısın. */
+/* Veya direkt HTML'de bg-dt-primary gibi kendi sınıfını kullan. */
+/* Eğer .dt-button.bg-blue-500 seçicisi hala gerekiyorsa, rengini buraya override edebilirsin: */
+/* .dt-button.bg-blue-500 {
+    background-color: rgb(var(--color-dt-primary-DEFAULT));
+    color: rgb(var(--color-white));
+}
+.dt-button.bg-blue-500:hover {
+    background-color: rgb(var(--color-dt-primary-dark));
+} */
+
+
+/* Modal Arka Planı (Overlay) ve diğer modal stilleri */
+/* Bu div'in stilini doğrudan HTML'deki Tailwind sınıfları (bg-black bg-opacity-50) belirleyecek.
+   tailwind.config.js'teki 'black' tanımı, --color-black değişkeninden aldığı boşluklu RGB değeri sayesinde doğru çalışmalı. */
+/* Manuel CSS kuralına ihtiyacın olmamalı, HTML'deki sınıf yeterli. */
+
+/* DTR Modal ve display için z-index kontrolü */
+div.dtr-modal {
+    /* Genel dtr-modal div'i */
+    /* Z-index 100 civarı olabilir, ama HTML'deki z-50 ile çakışmamalı */
+}
+div.dtr-modal div.dtr-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101; /* Overlay için z-index, modaldan daha düşük ama diğer içerikten yüksek */
+    background-color: rgba(var(--color-black), 0.6); /* **Bu, dtr-modal-background için manuel bir fallback veya override sağlar.** */
+}
+div.dtr-modal div.dtr-modal-display {
+    z-index: 102; /* Modal içeriği arka plandan üstte olmalı */
+}
+
+
+/* Dark Mode Ayarlamaları */
+html.dark div.dtr-modal div.dtr-modal-background {
+    background-color: rgba(var(--color-black), 0.7); /* Dark Mode'da daha koyu */
+}
+html.dark table.dataTable > thead > tr > th,
+html.dark table.dataTable > thead > tr > td {
+    border-color: rgb(var(--color-gray-700));
+}
+
+html.dark table.dataTable.row-border > tbody > tr > *,
+html.dark table.dataTable.display > tbody > tr > * {
+    border-color: rgb(var(--color-gray-700));
+}
+
+html.dark table.dataTable.row-border > tbody > tr.selected + tr.selected > td,
+html.dark table.dataTable.display > tbody > tr.selected + tr.selected > td {
+    border-top-color: rgba(var(--dt-row-selected), 0.65);
+}
+
+html.dark table.dataTable.cell-border > tbody > tr > th,
+html.dark table.dataTable.cell-border > tbody > tr > td {
+    border-color: rgb(var(--color-gray-700));
+}
+
+html.dark table.dataTable.cell-border > tbody > tr > th:first-child,
+html.dark table.dataTable.cell-border > tbody > tr > td:first-child {
+    border-color: rgb(var(--color-gray-700));
+}
+
+html.dark .dt-container.dt-empty-footer table.dataTable {
+    border-color: rgb(var(--color-gray-700));
+}
+
+html.dark .dt-container .dt-search input,
+html.dark .dt-container .dt-length select {
+    border-color: rgba(var(--color-white), 0.2);
+    background-color: rgb(var(--color-gray-800)); /* Koyu modda arkaplan */
+}
+
+html.dark .dt-container .dt-paging .dt-paging-button.current,
+html.dark .dt-container .dt-paging .dt-paging-button.current:hover {
+    border-color: rgb(var(--color-gray-700));
+    background-color: rgba(var(--color-white), 0.15);
+}
+
+html.dark .dt-container .dt-paging .dt-paging-button.disabled,
+html.dark .dt-container .dt-paging .dt-paging-button.disabled:hover,
+html.dark .dt-container .dt-paging .dt-paging-button.disabled:active {
+    color: rgb(var(--color-gray-600)) !important;
+}
+
+html.dark .dt-container .dt-paging .dt-paging-button:hover {
+    border-color: rgb(var(--color-gray-700));
+    background-color: rgb(var(--color-gray-700));
+}
+
+html.dark .dt-container .dt-paging .dt-paging-button:active {
+    background-color: rgb(var(--color-gray-800));
+}
+
+html.dark table.dataTable > tbody > tr > td.dtr-control:before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr > td.dtr-control:before {
+    border-left-color: rgba(var(--color-white), 0.5) !important;
+}
+
+html.dark table.dataTable > tbody > tr > td.dtr-control.arrow-right::before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr > td.dtr-control.arrow-right::before {
+    border-right-color: rgba(var(--color-white), 0.5) !important;
+}
+
+html.dark table.dataTable > tbody > tr.dtr-expanded > td.dtr-control:before,
+html.dark table.dataTable > tbody > tr.dtr-expanded > th.dtr-control:before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr.dtr-expanded > td.dtr-control:before,
+html[data-bs-theme=dark] table.dataTable > tbody > tr.dtr-expanded > th.dtr-control:before {
+    border-top-color: rgba(var(--color-white), 0.5) !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+}
+
+html.dark table.dataTable > tbody > tr.child ul.dtr-details > li,
+html[data-bs-theme=dark] table.dataTable > tbody > tr.child ul.dtr-details > li {
+    border-bottom-color: rgb(var(--color-gray-700));
+}
+
+html.dark div.dtr-modal div.dtr-modal-display,
+html[data-bs-theme=dark] div.dtr-modal div.dtr-modal-display {
+    background-color: rgb(var(--color-gray-900)); /* Koyu mod modal arka planı */
+    border: 1px solid rgba(var(--color-white), 0.15);
+}
+
+/* Genel Panel ve Diğer Ortak Stiller */
+
+
+.dt-buttons {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dt-search {
+    margin-bottom: 0.5rem;
+}
+
+.dt-info {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+select {
+    background-size: 1.5em 1.5em;
+    padding-right: 0.70rem !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}

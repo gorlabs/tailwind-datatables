@@ -1,0 +1,44 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "dependencies": {
+        "@alpinejs/collapse": "^3.14.9",
+        "@alpinejs/focus": "^3.14.9",
+        "@alpinejs/persist": "^3.14.9",
+        "@alpinejs/ui": "^3.14.9",
+        "alpinejs": "^3.14.9",
+        "datatables.net": "^2.3.2",
+        "datatables.net-buttons": "^3.2.4",
+        "datatables.net-buttons-dt": "^3.2.4",
+        "datatables.net-dt": "^2.3.2",
+        "datatables.net-responsive": "^3.0.5",
+        "datatables.net-responsive-dt": "^3.0.5",
+        "dayjs": "^1.11.13",
+        "jquery": "^3.7.1",
+        "jszip": "^3.10.1",
+        "laravel-vite-plugin": "^1.0",
+        "pdfmake": "^0.2.20",
+        "sweetalert2": "^11.22.2",
+        "tailwindcss": "^4.0.7",
+        "vite": "^6.0"
+    },
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "4.9.5",
+        "@tailwindcss/oxide-linux-x64-gnu": "^4.0.1",
+        "lightningcss-linux-x64-gnu": "^1.29.1"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "@tailwindcss/postcss": "^4.1.11",
+        "@tailwindcss/vite": "^4.1.11",
+        "autoprefixer": "^10.4.21",
+        "axios": "^1.10.0",
+        "concurrently": "^9.2.0",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.1.0"
+    }
+}
