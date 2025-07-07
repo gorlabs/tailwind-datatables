@@ -39,22 +39,19 @@ Bu komut, paketin CSS/JS varlıklarını ve konfigürasyon dosyalarını projeni
 
 ```bash
 
-composer update
-
 php artisan vendor:publish --tag=tailwind-datatables-views
 php artisan vendor:publish --tag=gorlabs-tailwind-datatables-config 
 php artisan vendor:publish --tag=tailwind-datatables-css
 ```
 
-Adım 3: Frontend Yapılandırması (Vite, Tailwind CSS, Alpine.js)
+## Frontend Yapılandırması (Vite, Tailwind CSS, Alpine.js)
 
-3.0.2. gorlabs-datatable/tailwind.config.js Güncellemesi (KRİTİK!)
+### gorlabs-datatable/tailwind.config.js Güncellemesi (KRİTİK!)
 gorlabs-datatable/tailwind.config.js dosyanızı açın.
 
 Dosyanın içeriğini aşağıdaki gibi tamamen değiştirin. Bu, Tailwind Forms pluginini doğru şekilde import edecek ve özel renkleri tanımlayacaktır.
 
 ```js
-// tailwind.config.js
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 
@@ -142,14 +139,12 @@ export default {
 ```
 
 
-3.0.3. gorlabs-datatable/vite.config.js Güncellemesi (KRİTİK!)
+### gorlabs-datatable/vite.config.js Güncellemesi (KRİTİK!)
 gorlabs-datatable/vite.config.js dosyanızı açın.
 
 Dosyanın içeriğini aşağıdaki gibi tamamen değiştirin. Bu, v4.x'e özgü Vite pluginini kaldıracak ve v3.x için PostCSS yapılandırmasını ekleyecektir.
 
 ```js
-// gorlabs-datatable/vite.config.js
-
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
@@ -179,7 +174,7 @@ server: {
 
 ```
 
-3.1. resources/css/app.css Güncellemesi (SON HALİ!)
+### resources/css/app.css Güncellemesi (SON HALİ!)
 gorlabs-datatable/resources/css/app.css dosyanızı açın ve içeriğini aşağıdaki kodla tamamen değiştirin:
 
 ```css
@@ -250,11 +245,10 @@ gorlabs-datatable/resources/css/app.css dosyanızı açın ve içeriğini aşağ
 
 
 /* Bazı özel durumlar için, doğrudan CSS kurallarına ihtiyacınız olabilir. */
-3.2. resources/js/app.js Güncellemesi
+### resources/js/app.js Güncellemesi
 gorlabs-datatable/resources/js/app.js dosyasını aç ve içeriğini aşağıdaki gibi güncelleyerek DataTables, Alpine.js ve diğer gerekli kütüphaneleri dahil et:
 
 ```js
-// resources/js/app.js
 
 import './bootstrap';
 import $ from 'jquery';
@@ -275,10 +269,9 @@ import '../../vendor/gorlabs/tailwind-datatables/resources/js/app';
 php artisan make:model Post -mfs
 ```
 
-4.2. app/Models/Post.php Modelini Güncelle (KRİTİK!)
+### app/Models/Post.php Modelini Güncelle (KRİTİK!)
 
 ```php
-// app/Models/Post.php
 <?php
 
 namespace App\Models;
@@ -307,11 +300,10 @@ class Post extends Model
 ```
 
 
-4.3. database/migrations/YYYY_MM_DD_HHMMSS_create_posts_table.php dosyasını güncelle:
+### database/migrations/YYYY_MM_DD_HHMMSS_create_posts_table.php dosyasını güncelle:
 Oluşturulan migration dosyasını (ismi tarihe göre değişir) aç ve up() metodunu aşağıdaki gibi güncelle:
 
 ```php
-// .../database/migrations/YYYY_MM_DD_HHMMSS_create_posts_table.php
 <?php
 
 
@@ -351,9 +343,8 @@ return new class extends Migration
 
 
 
-4.4. database/factories/PostFactory.php dosyasını güncelleyin:
+### database/factories/PostFactory.php dosyasını güncelleyin:
 ```php
-// .../database/factories/PostFactory.php
 <?php
 namespace Database\Factories;
 
@@ -384,7 +375,7 @@ class PostFactory extends Factory
 
 ```
 
-PostSeeder.php düzenleme
+### PostSeeder.php düzenleme
 
 ```php
 <?php
@@ -410,11 +401,9 @@ class PostSeeder extends Seeder
 ```
 
 
-4.5. database/seeders/DatabaseSeeder.php dosyasını güncelleyin:
+### database/seeders/DatabaseSeeder.php dosyasını güncelleyin:
 
 ```php
-// .../database/seeders/DatabaseSeeder.php
-
 namespace Database\Seeders;
 
 use App\Models\User;
@@ -438,7 +427,7 @@ class DatabaseSeeder extends Seeder
 ```
 
 
-4.6. Veritabanını migrate edin ve seed edin:
+### Veritabanını migrate edin ve seed edin:
 Terminalde gorlabs-datatable projenin kök dizinindeyken bu komutu çalıştır:
 
 ```bash
@@ -446,7 +435,7 @@ php artisan migrate:fresh --seed
 ```
 
 
-// gorlabs-datatable/vite.config.js
+### gorlabs-datatable/vite.config.js
 
 ```js
 import { defineConfig } from 'vite';
@@ -485,11 +474,11 @@ export default defineConfig({
 ```   
 
 
-4.7. app/DataTables/PostsDataTable.php Oluşturma
+### app/DataTables/PostsDataTable.php Oluşturma
   ```bash
 php artisan datatable:make PostsDataTable --model=Post
 ``` 
-4.8. app/DataTables/PostsDataTable.php içeriğini güncelleyin:
+### app/DataTables/PostsDataTable.php içeriğini güncelleyin:
 ```php
 <?php
 
@@ -609,14 +598,14 @@ class PostsDataTable extends DataTable
 
 ```
 
-4.9. app/Http/Controllers/PostController.php Oluşturma
+### app/Http/Controllers/PostController.php Oluşturma
 Terminalde gorlabs-datatable projenin kök dizinindeyken aşağıdaki komutu çalıştır:
 
 ```bash
 php artisan make:controller PostController --resource
 ```
 
-4.10. app/Http/Controllers/PostController.php içeriğini güncelleyin:
+### app/Http/Controllers/PostController.php içeriğini güncelleyin:
 ```php
 <?php
 
@@ -762,7 +751,7 @@ class PostController extends Controller
     }
 }
 ```
-post.config.js içeriğini güncelleyin
+### post.config.js içeriğini güncelleyin
 ```js
 export default {
     plugins: {
@@ -772,7 +761,7 @@ export default {
 };
 ```
 
-4.11. routes/web.php Güncellemesi
+### routes/web.php Güncellemesi
 gorlabs-datatable/routes/web.php dosyanızı açın ve aşağıdaki rotaları ekleyin.
 
 ```php
@@ -785,13 +774,13 @@ Route::get('posts-data', [PostController::class, 'ajaxData'])->name('posts.data'
 
 
 
-Adım 5: Blade View'ları Hazırlama
+## Blade View'ları Hazırlama
 Bu adımda, paketin DataTables'ı ve modal yapısını kullanacak Blade view'larını projenizde oluşturacağız.
 ```bash
 mkdir -p resources/views/posts
 touch resources/views/posts/index.blade.php 
 ```
-5.1. resources/views/posts/index.blade.php Oluşturma
+### resources/views/posts/index.blade.php Oluşturma
 resources/views/posts/index.blade.php yolunda yeni bir dosya oluşturun (eğer yoksa, resources/views/posts klasörünü de oluşturmanız gerekebilir) ve içeriğini aşağıdaki kodla doldurun:
 
 ```html
@@ -897,7 +886,7 @@ resources/views/posts/index.blade.php yolunda yeni bir dosya oluşturun (eğer y
 </html>
 ```
 
-Paketleri yükleyin Son Dokunuşlar:
+## Paketleri yükleyin Son Dokunuşlar:
 
 
 

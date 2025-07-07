@@ -39,21 +39,18 @@ composer require gorlabs/tailwind-datatables
 ### Publish the Package's Assets and Configurations:
 This command copies the package's CSS/JS assets and configuration files into your project.
 ```bash
-
-composer update
-
+ 
 php artisan vendor:publish --tag=tailwind-datatables-views
 php artisan vendor:publish --tag=gorlabs-tailwind-datatables-config 
 php artisan vendor:publish --tag=tailwind-datatables-css
 ```
 
-### Frontend Configuration (Vite, Tailwind CSS, Alpine.js)
-3.0.2. gorlabs-datatable/tailwind.config.js Update (CRITICAL!)
+## Frontend Configuration (Vite, Tailwind CSS, Alpine.js)
+### gorlabs-datatable/tailwind.config.js Update (CRITICAL!)
 Open your gorlabs-datatable/tailwind.config.js file.
 
 Completely replace the content of the file with the following. This will correctly import the Tailwind Forms plugin and define custom colors.
-```js
-// tailwind.config.js
+```js 
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 
@@ -146,9 +143,7 @@ Open your gorlabs-datatable/vite.config.js file.
 
 Completely replace the content of the file with the following
 
-```js
-// gorlabs-datatable/vite.config.js
-
+```js 
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from 'tailwindcss';
@@ -234,9 +229,7 @@ Open your gorlabs-datatable/resources/css/app.css file and completely replace it
  
 ### resources/js/app.js Update
 Open the gorlabs-datatable/resources/js/app.js file and update its content as follows to include DataTables, Alpine.js, and other necessary libraries:
-```js
-// resources/js/app.js
-
+```js 
 import './bootstrap';
 import $ from 'jquery';
 window.$ = window.jQuery = $;
@@ -259,7 +252,6 @@ php artisan make:model Post -mfs
 ### Update the app/Models/Post.php Model 
 
 ```php
-// app/Models/Post.php
 <?php
 
 namespace App\Models;
@@ -291,7 +283,6 @@ class Post extends Model
 ### Update the database/migrations/YYYY_MM_DD_HHMMSS_create_posts_table.php file:
 Open the created migration file (its name varies by date) and update the up() method as follows:
 ```php
-// .../database/migrations/YYYY_MM_DD_HHMMSS_create_posts_table.php
 <?php
 
 
@@ -333,7 +324,6 @@ return new class extends Migration
 
 ### Update the database/factories/PostFactory.php file:
 ```php
-// .../database/factories/PostFactory.php
 <?php
 namespace Database\Factories;
 
@@ -393,8 +383,7 @@ class PostSeeder extends Seeder
 ### Update the database/seeders/DatabaseSeeder.php File:
 
 ```php
-// .../database/seeders/DatabaseSeeder.php
-
+<?php
 namespace Database\Seeders;
 
 use App\Models\User;
