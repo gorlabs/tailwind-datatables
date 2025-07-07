@@ -163,7 +163,7 @@ Alpine.start();
 
 
 ```
-post.config.js içeriğini güncelleyin
+postcss.config.js içeriğini güncelleyin
 ```js
 export default {
     plugins: {

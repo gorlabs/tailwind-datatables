@@ -102,9 +102,9 @@ window.$ = jQuery;
 
 import 'datatables.net';
 import 'datatables.net-buttons';
-import 'datatables.net-buttons/js/buttons.html5.js'; // HTML5 export butonları
-import 'datatables.net-buttons/js/buttons.print.js'; // Print butonu
-import 'datatables.net-buttons/js/buttons.colVis.js'; // Column visibility butonu
+import 'datatables.net-buttons/js/buttons.html5.js'; 
+import 'datatables.net-buttons/js/buttons.print.js'; 
+import 'datatables.net-buttons/js/buttons.colVis.js'; 
 import 'datatables.net-responsive';
 
 
