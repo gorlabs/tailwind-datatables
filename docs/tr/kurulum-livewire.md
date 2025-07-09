@@ -846,6 +846,28 @@ resources/views/posts/index.blade.php yolunda yeni bir dosya oluşturun (eğer y
 </html>
 ```
 
+Elbette dostum, istediğin Türkçe metni aşağıda bulabilirsin:
+
+Önemli: Tailwind CSS Sürüm Çakışmasını Çözün (npm kullanıcıları için)
+Eğer Laravel Breeze gibi bir başlangıç kiti (özellikle npx breeze:install livewire ile) kullandıysanız ve bu, Tailwind CSS'in eski bir sürümünü kurduysa, bu paket tarafından gereksinim duyulan Tailwind CSS v4 ile bir sürüm çakışması yaşayabilirsiniz. Bu durum genellikle asset derlemesi sırasında [vite:css] [postcss] postcss-import: ... Unknown word "use strict" hatası olarak ortaya çıkar.
+
+Bu sorunu çözmek için:
+
+package.json dosyanızı açın.
+
+devDependencies bölümünü bulun.
+
+Tailwind CSS sürüm 3'ü belirten satırı kaldırın. Genellikle şöyle görünür:
+
+```JSON
+"tailwindcss": "^3.1.0"
+```
+
+
+(dependencies bölümündeki Tailwind CSS girdisini (^4.0.7 olmalı) koruduğunuzdan emin olun.)
+
+Bu değişikliği yaptıktan sonra, npm install ve npm run dev/npm run build komutlarına normal şekilde devam edebilirsiniz. Bu, npm'in Tailwind CSS v4'ü doğru bir şekilde kurmasını sağlayacaktır.
+
 ## Paketleri yükleyin Son Dokunuşlar:
 
 
@@ -855,13 +877,12 @@ resources/views/posts/index.blade.php yolunda yeni bir dosya oluşturun (eğer y
 composer update  
 composer dump-autoload
 php artisan optimize:clear 
-npm cache clean --force
+npm cache verify
 rm -rf node_modules yarn.lock package-lock.json
 rm -rf public/build 
 npm install alpinejs @alpinejs/collapse @alpinejs/focus @alpinejs/persist @alpinejs/ui dayjs jquery datatables.net datatables.net-responsive datatables.net-buttons datatables.net-buttons-dt datatables.net-dt datatables.net-responsive-dt jszip pdfmake sweetalert2
 npm install --save-dev @tailwindcss/postcss @tailwindcss/vite autoprefixer axios concurrently 
-php artisan optimize:clear 
-npm cache clean --force
+php artisan optimize:clear  
 npm run dev 
 ```
  

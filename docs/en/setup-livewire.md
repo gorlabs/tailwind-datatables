@@ -829,6 +829,28 @@ touch resources/views/posts/index.blade.php
 </html>
 ```
 
+
+# Important: Resolve Tailwind CSS Version Conflict (for npm users)
+If you used a starter kit like Laravel Breeze (especially with npx breeze:install livewire) which might install an older version of Tailwind CSS, you might encounter a version conflict with Tailwind CSS v4 required by this package. This often manifests as a [vite:css] [postcss] postcss-import: ... Unknown word "use strict" error during asset compilation.
+
+To fix this:
+
+Open your package.json file.
+
+Locate the devDependencies section.
+
+Remove the line that specifies tailwindcss version 3. It usually looks like this:
+
+```JSON
+"tailwindcss": "^3.1.0"
+```
+
+
+(Make sure to keep the tailwindcss entry in your dependencies section, which should be ^4.0.7.)
+
+After making this change, proceed with the npm install and npm run dev/npm run build commands as usual. This ensures that npm correctly installs Tailwind CSS v4.
+
+
 ### Install Packages - Final Touches:
 
 
@@ -838,13 +860,12 @@ touch resources/views/posts/index.blade.php
 composer update  
 composer dump-autoload
 php artisan optimize:clear 
-npm cache clean --force
+npm cache verify
 rm -rf node_modules yarn.lock package-lock.json
 rm -rf public/build 
 npm install alpinejs @alpinejs/collapse @alpinejs/focus @alpinejs/persist @alpinejs/ui dayjs jquery datatables.net datatables.net-responsive datatables.net-buttons datatables.net-buttons-dt datatables.net-dt datatables.net-responsive-dt jszip pdfmake sweetalert2
 npm install --save-dev @tailwindcss/postcss @tailwindcss/vite autoprefixer axios concurrently 
-php artisan optimize:clear 
-npm cache clean --force
+php artisan optimize:clear  
 npm run dev 
 ```
 This guide covers the setup and basic file contents for a Laravel + Livewire + Tailwind DataTables project. If you have any questions, please feel free to get in touch.
