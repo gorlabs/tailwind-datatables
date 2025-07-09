@@ -186,6 +186,8 @@ gorlabs-datatable/resources/css/app.css dosyanızı açın ve içeriğini aşağ
 ```css
 /* Import DataTables Responsive styles here and at the very beginning. */
 @import 'tailwindcss';
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 
@@ -430,47 +432,7 @@ Terminalde gorlabs-datatable projenin kök dizinindeyken bu komutu çalıştır:
 ```bash
 php artisan migrate:fresh --seed
 ```
-
-
-### gorlabs-datatable/vite.config.js
-
-```js
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-import tailwindcssPlugin from '@tailwindcss/postcss'; // Burası önemli
-import autoprefixer from 'autoprefixer';
-export default defineConfig({
-    plugins: [
-        laravel({
-            input: [
-                'resources/css/app.css',
-                'resources/js/app.js'
-            ],
-            refresh: true,
-        }),
-    ],
-    build: {
-        minify: true, //  Minificaiton open
-        sourcemap: true, // Hata ayıklama için sourcemap oluştur
-    },
-    css: {
-        postcss: {
-            plugins: [
-                tailwindcssPlugin, // Ve burası
-                autoprefixer,
-            ],
-        },
-    },
-    server: {
-        cors: true,
-    },
-
-});
-
-
-```   
-
-
+  
 ### app/DataTables/PostsDataTable.php Oluşturma
   ```bash
 php artisan datatable:make PostsDataTable --model=Post
