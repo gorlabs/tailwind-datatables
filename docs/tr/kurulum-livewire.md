@@ -860,7 +860,7 @@ devDependencies bölümünü bulun.
 Tailwind CSS sürüm 3'ü belirten satırı kaldırın. Genellikle şöyle görünür:
 
 ```JSON
-"tailwindcss": "^3.1.0"
+"tailwindcss": "^3.*.*"
 ```
 
 

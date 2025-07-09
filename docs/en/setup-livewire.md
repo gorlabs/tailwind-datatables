@@ -842,7 +842,7 @@ Locate the devDependencies section.
 Remove the line that specifies tailwindcss version 3. It usually looks like this:
 
 ```JSON
-"tailwindcss": "^3.1.0"
+"tailwindcss": "^3.*.*"
 ```
 
 

@@ -1358,17 +1358,16 @@ php artisan migrate:fresh --seed
 
 ```bash 
 
-
 composer update 
 composer dump-autoload
 php artisan optimize:clear 
-npm cache clean --force
+npm cache verify
 rm -rf node_modules yarn.lock package-lock.json
 rm -rf public/build 
 npm install @alpinejs/collapse @alpinejs/focus @alpinejs/persist @alpinejs/ui @tailwindcss/postcss alpinejs class-variance-authority clsx concurrently dayjs jszip pdfmake postcss-loader sweetalert2 tailwind-merge tw-animate-css
 npm install --save-dev @types/alpinejs @types/jquery @types/pdfmake datatables.net datatables.net-buttons datatables.net-buttons-dt datatables.net-dt datatables.net-responsive datatables.net-responsive-dt jquery postcss
 php artisan optimize:clear 
-npm cache clean --force
+npm cache verify
 npm run dev
 ```
   
