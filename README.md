@@ -97,4 +97,4 @@ Bug reports, feature requests, and code contributions are welcome. Please refer 
 ## License
 
 The Gorlabs Laravel Tailwind DataTables package is released under the MIT License..
-Buy me a coffee <img src="qr-code.png" alt="QR Code" width="150"/> or http://buymeacoffee.com/gorlabs
+Buy me a coffee <img src="qr-code.png" alt="QR Code" width="150"/> or http://www.buymeacoffee.com/gorlabs
