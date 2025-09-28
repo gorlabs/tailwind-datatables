@@ -41,8 +41,8 @@ return [
     |
     */
     'views' => [
-        'table' => 'tailwind-datatables::datatable.table',
-        'scripts' => 'tailwind-datatables::datatable.scripts',
+        'table' => 'tailwind-datatables::datatables.table',
+        'scripts' => 'tailwind-datatables::datatables.scripts',
     ],
 
     /*

@@ -10,7 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "gorlabs/tailwind-datatables": "^1.0",
+        "gorlabs/tailwind-datatables": "dev-copilot/fix-4fb803ab-bc49-41e6-a3a9-02c4ac576efe",
         "inertiajs/inertia-laravel": "^2.0",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
@@ -70,6 +70,13 @@
             "@php artisan test"
         ]
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../",
+            "symlink": true
+        }
+    ],
     "extra": {
         "laravel": {
             "dont-discover": []
@@ -84,6 +91,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

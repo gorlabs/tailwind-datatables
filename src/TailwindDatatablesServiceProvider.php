@@ -30,8 +30,8 @@ class TailwindDatatablesServiceProvider extends ServiceProvider
 
         // YAJRA DATATABLES HTML YAPILANDIRMASINI OTOMATİK SET ETME
         // Bu kısım, kullanıcıların config/datatables-html.php dosyasını elle değiştirmesini engeller.
-        Config::set('datatables-html.script', 'tailwind-datatables::datatable.scripts');
-        Config::set('datatables-html.view', 'tailwind-datatables::datatable.table');
+        Config::set('datatables-html.script', 'tailwind-datatables::datatables.scripts');
+        Config::set('datatables-html.view', 'tailwind-datatables::datatables.table');
 
     }
 
